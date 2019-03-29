@@ -1,0 +1,1 @@
+{"version":3,"sources":["footer/footer.scss","header/header.scss"],"names":[],"mappings":"AAAA;AACA;ACDA;AACA;AACA;AACA","file":"style.scss","sourcesContent":[".footer {background-color: white;}\n",".header {\n  font-size: 5px;\n}\n"]}
