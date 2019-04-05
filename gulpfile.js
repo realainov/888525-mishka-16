@@ -17,24 +17,24 @@ const rename = require("gulp-rename");
 const browsersync = require("browser-sync").create();
 
 gulp.task("bem", function () {
-  return gulp.src("source/html/*.html")
+  return gulp.src("source/*.html")
     .pipe(gulpbemcss({
       folder: "source/sass/blocks",
       extension: "scss",
       elementSeparator: "__",
       modifierSeparator: "--"
     }))
-    .pipe(gulp.dest("source/html"));
+    .pipe(gulp.dest("source"));
 });
 
 gulp.task("pug", function () {
   return gulp.src("source/pug/*.pug")
     .pipe(pug({pretty: true}))
-    .pipe(gulp.dest("source/html"));
+    .pipe(gulp.dest("source"));
 });
 
 gulp.task("html-build", function () {
-  return gulp.src("source/html/*.html")
+  return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
 });
@@ -57,7 +57,7 @@ gulp.task("sass", function () {
     })
   ];
 
-  return gulp.src("source/blocks/**/*.scss")
+  return gulp.src("source/sass/blocks/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(concat("style.scss", {newLine: "\r\n"}))
     .pipe(gulp.dest("source/sass"))
@@ -91,7 +91,7 @@ gulp.task("js-build", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("img", function () {
+gulp.task("img-build", function () {
   return gulp.src("app/img/*", {since: gulp.lastRun("img")})
     .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
@@ -100,10 +100,10 @@ gulp.task("img", function () {
 gulp.task("browser-sync", function () {
   browsersync.init({
     server: {
-      baseDir: "source/html"
+      baseDir: "source"
     }
   });
-  browsersync.watch(["source/html/*.html", "source/css/style.css", "source/js/app.js", "source/img/**/*"], browsersync.reload);
+  browsersync.watch(["source/*.html", "source/css/style.css", "source/js/app.js", "source/img/**/*"], browsersync.reload);
 });
 
 gulp.task("source", function () {
@@ -112,7 +112,7 @@ gulp.task("source", function () {
   gulp.watch("source/js/blocks/*.js", gulp.parallel("js"));
 });
 
-gulp.task("build", gulp.parallel("html-build", "css-build", "js-build", "img"));
+gulp.task("build", gulp.parallel("html-build", "css-build", "js-build", "img-build"));
 
 gulp.task("default", gulp.series(
   gulp.parallel("pug", "sass", "js"),

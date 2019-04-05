@@ -1,0 +1,56 @@
+doctype
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="css/style.css")
+    title="Каталог / Интернет-магазин «MISHKA»"
+  body
+    header.site-header
+      a.site-header__logo(href="index.html")
+        img.site-header__logo-image(src="img/mishka-logo.svg" width="86" height="35" alt="Логотип компании «MISHKA»")
+      include blocks/site-navigation
+    main.site-main
+      h1.visually-hidden Интернет-магазин «MISHKA»: Милые штуки ручной работы для дома
+      section.goods.site-main__goods
+        h2.title.goods__title Каталог товаров
+        ul.goods__list
+          li.goods__item
+            a.goods__img-link(href="#")
+              img.goods__img(src="img/photo-1.png")
+            br
+            a.goods__item-link(href="#") Зайчик-попрыгайчик
+            br
+            span.goods__description Рост 30 см, вес 200 г
+            br
+            span.goods__price 1 200 руб.
+            br
+            button.goods__basket(type="button" title="Добавить в корзину") Добавить в конзину
+          li.goods__item
+            a.goods__img-link(href="#")
+              img.goods__img(src="img/photo-2.png")
+            br
+            a.goods__item-link(href="#") Корзинка для белья
+            br
+            span.goods__description Диаметр 15 см, высота 10 см
+            br
+            span.goods__price 690 руб.
+            br
+            button.goods__basket(type="button" title="Добавить в корзину") Добавить в конзину
+          li.goods__item
+            a.goods__img-link(href="#")
+              img.goods__img(src="img/photo-3.png")
+            br
+            a.goods__item-link(href="#") Большая корзинка для игрушек
+            br
+            span.goods__description Диаметр 30 см, высота 30 см
+            br
+            span.goods__price 1 500 руб.
+            br
+            button.goods__basket(type="button" title="Добавить в корзину") Добавить в конзину
+      section.production.site-header__production
+        h2.title.production__title Процесс производства
+        div.production__video
+          img.production__img(src="img/video.png" width="260" height="150" alt="Видео производства")
+        p.production__text По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        a.button.production__button(href="#") Сделать заказ
+    script(src="js/app.js")
