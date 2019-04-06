@@ -2,7 +2,84 @@ doctype
 html(lang="ru")
   head
     meta(charset="utf-8")
-    link(rel="stylesheet" href="source/css/style.css")
-    title=""
+    link(rel="stylesheet" href="css/style.css")
+    title="Главная страница / Интернет-магазин «MISHKA»"
   body
-    script(src="source/js/app.js")
+    header.site-header
+      a.site-header__logo
+        img.site-header__logo-image(src="img/mishka-logo.svg" width="86" height="35" alt="Логотип компании «MISHKA»")
+      include blocks/site-navigation
+    main.site-main
+      h1.visually-hidden Главная страница / Интернет-магазин «MISHKA»
+      section.catalog.site-main__catalog
+        h2.visually-hidden Разделы каталога
+        b.title.catalog__title Милые штуки ручной работы для дома
+        ul.catalog__list
+          li.catalog__item
+            a.catalog__link(href="#") Предметы интерьера
+          li.catalog__item
+            a.catalog__link(href="#") Детские игрушки
+      section.ware.site-main__ware
+        h2.title.ware__title Вязаные корзинки
+        span.ware__best-article Товар недели
+        p.ware__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+        table.ware__description-table
+          tr.ware__description-row
+            td.ware__description-col Цвет:
+            td.ware__description-col «Тиффани»/серый
+          tr.ware__description-row
+            td.ware__description-col Диаметр:
+            td.ware__description-col 25 см
+          tr.ware__description-row
+            td.ware__description-col Высота:
+            td.ware__description-col 15 см
+        img.ware__img(src="img/triple-set.png" width="260" height="316" alt="Изображение вязаных корзинок")
+        span.ware__price Цена: 990 руб.
+        a.button.ware__order-button(href="#") Заказать
+      section.briefly.site-main__briefly
+        h2.title.briefly__title Коротко о нас:
+        ul.briefly__list
+          li.briefly__item.briefly___item--eco Экологически чистые материалы
+          li.briefly__item.briefly___item--norway Скандинавский стиль по российской цене
+          li.briefly__item.briefly___item--like Увеличивает лайки на фотографиях
+          li.briefly__item.briefly___item--love Связано вручную с любовью и умилением
+          li.briefly__item.briefly___item--home Поддержка отечественного производителя
+          li.briefly__item.briefly___item--present Поставляется в подарочной упаковке
+      section.response.site-main__response
+        h2.title.response__title Отзывы
+
+        ul.response__comment-list
+          li.response__comment-item
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
+          li.resporse__comment-item
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
+          li.resporse__comment-item
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
+        ul.response__control-list
+          li.response__control-item
+            button.response__control-prev(type="button" title="Предыдущий отзыв") Предыдущий отзыв
+          li.response__control-item
+            button.response__control-next(type="button" title="Следующий отзыв") Следующий отзыв
+        a.button.response__write-button(href="#") Написать
+      section.contacts.site-main__contacts
+        h2.title.contacts__title Контакты
+        table.contacts__description-table
+          tr.contacts__description-row
+            td.contacts__description-col email:
+            td.contacts__description-col
+              a.contacts__email(href="mailto:info@mimimishkashop.ru") info@mimimishkashop.ru
+          tr.contacts__description-row
+            td.contacts__description-col адрес:
+            td.contacts__description-col
+              address.contacts__address г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+        div.contacts__map
+          img(src="img/map.png" width="320" height="457" alt="Наше расположение")
+        a.button.contacts__write-us-button(href="#") Написать нам
+    include blocks/site-footer
+    script(src="js/app.js")
