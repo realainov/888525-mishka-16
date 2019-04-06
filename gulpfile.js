@@ -3,7 +3,7 @@
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
 const pug = require("gulp-pug");
-const htmlmin = require("gulp-html-minifier");
+const beautify = require('gulp-beautify');
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -29,14 +29,22 @@ gulp.task("bem", function () {
 
 gulp.task("pug", function () {
   return gulp.src("source/pug/*.pug")
-    .pipe(pug({pretty: true}))
+    .pipe(pug({pretty: false}))
+    .pipe(beautify.html({
+      "indent_size": 2,
+      "indent_with_tabs": false,
+      "inline": [],
+      "unformatted": [],
+      "content_unformatted": [],
+      "extra_liners": []
+}))
     .pipe(gulp.dest("source"));
 });
 
 gulp.task("html-build", function () {
   return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("sass", function () {
@@ -107,7 +115,7 @@ gulp.task("browser-sync", function () {
 });
 
 gulp.task("source", function () {
-  gulp.watch("source/pug/*.pug", gulp.parallel("pug"));
+  gulp.watch("source/pug/**/*.pug", gulp.parallel("pug"));
   gulp.watch("source/sass/blocks/**/*.scss", gulp.parallel("sass"));
   gulp.watch("source/js/blocks/*.js", gulp.parallel("js"));
 });

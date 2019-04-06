@@ -10,7 +10,7 @@ html(lang="ru")
         img.site-header__logo-image(src="img/mishka-logo.svg" width="86" height="35" alt="Логотип компании «MISHKA»")
       include blocks/site-navigation
     main.site-main
-      h1.visually-hidden Интернет-магазин «MISHKA»: Милые штуки ручной работы для дома
+      h1.visually-hidden Главная страница / Интернет-магазин «MISHKA»
       section.catalog.site-main__catalog
         h2.visually-hidden Разделы каталога
         b.title.catalog__title Милые штуки ручной работы для дома
@@ -34,50 +34,52 @@ html(lang="ru")
             td.ware__description-col Высота:
             td.ware__description-col 15 см
         img.ware__img(src="img/triple-set.png" width="260" height="316" alt="Изображение вязаных корзинок")
-        br
         span.ware__price Цена: 990 руб.
-        br
-        a.button.ware__order-button Заказать
+        a.button.ware__order-button(href="#") Заказать
       section.briefly.site-main__briefly
         h2.title.briefly__title Коротко о нас:
         ul.briefly__list
-          li.briefly__item Экологически чистые материалы
-          li.briefly__item Скандинавский стиль по российской цене
-          li.briefly__item Увеличивает лайки на фотографиях
-          li.briefly__item Связано вручную с любовью и умилением
-          li.briefly__item Поддержка отечественного производителя
-          li.briefly__item Поставляется в подарочной упаковке
+          li.briefly__item.briefly___item--eco Экологически чистые материалы
+          li.briefly__item.briefly___item--norway Скандинавский стиль по российской цене
+          li.briefly__item.briefly___item--like Увеличивает лайки на фотографиях
+          li.briefly__item.briefly___item--love Связано вручную с любовью и умилением
+          li.briefly__item.briefly___item--home Поддержка отечественного производителя
+          li.briefly__item.briefly___item--present Поставляется в подарочной упаковке
       section.response.site-main__response
         h2.title.response__title Отзывы
+
         ul.response__comment-list
+          li.response__comment-item
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
           li.resporse__comment-item
-            p.response__comment Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-            span.response__author Анастасия Красильникова
-            span.response__author-tag @misssssiskras
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
           li.resporse__comment-item
-            p.response__comment Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-            span.response__author Анастасия Красильникова
-            span.response__author-tag @misssssiskras
-          li.resporse__comment-item
-            p.response__comment Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-            span.response__author Анастасия Красильникова
-            span.response__author-tag @misssssiskras
+            blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            cite.response__comment-author Анастасия Красильникова
+            cite.response__comment-tag @misssssiskras
         ul.response__control-list
           li.response__control-item
-            button.response__prev-control(type="button" title="Предыдущий отзыв") Предыдущий отзыв
+            button.response__control-prev(type="button" title="Предыдущий отзыв") Предыдущий отзыв
           li.response__control-item
-            button.response__next-control(type="button" title="Следующий отзыв") Следующий отзыв
+            button.response__control-next(type="button" title="Следующий отзыв") Следующий отзыв
         a.button.response__write-button(href="#") Написать
       section.contacts.site-main__contacts
-        h2.title.contacts__title Контакты)
-        span.contacts__email-inscription email:
-        br
-        a.contacts__email(href="mailto:info@mimimishkashop.ru") info@mimimishkashop.ru
-        br
-        span.contacts__address-inscription адрес:
-        address.contacts__address г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.615276461868!2d30.322879873980792!3d59.938525848941396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1554371124615!5m2!1sru!2sru" width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
-        br
+        h2.title.contacts__title Контакты
+        table.contacts__description-table
+          tr.contacts__description-row
+            td.contacts__description-col email:
+            td.contacts__description-col
+              a.contacts__email(href="mailto:info@mimimishkashop.ru") info@mimimishkashop.ru
+          tr.contacts__description-row
+            td.contacts__description-col адрес:
+            td.contacts__description-col
+              address.contacts__address г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+        div.contacts__map
+          img(src="img/map.png" width="320" height="457" alt="Наше расположение")
         a.button.contacts__write-us-button(href="#") Написать нам
     include blocks/site-footer
     script(src="js/app.js")
