@@ -3,6 +3,7 @@
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
 const pug = require("gulp-pug");
+const beautify = require('gulp-beautify');
 const htmlmin = require("gulp-html-minifier");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
@@ -35,6 +36,7 @@ gulp.task("pug", function () {
     .pipe(beautify.html({
       "indent_size": 2,
       "indent_with_tabs": false,
+      "end-with-newline": true,
       "inline": [],
       "unformatted": [],
       "content_unformatted": [],
