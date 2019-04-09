@@ -54,7 +54,7 @@ gulp.task("html-build", function () {
 gulp.task("sass", function () {
 
   const processors = [
-    autoprefixer({browsers: ["last 2 version"]}),
+    //autoprefixer({browsers: ["last 2 version"]}),
     sorting({
       "order": [
         "custom-properties",
@@ -69,13 +69,18 @@ gulp.task("sass", function () {
     })
   ];
 
-  return gulp.src("source/sass/blocks/**/*.scss")
+  return gulp.src(["source/sass/**/*.scss", "!source/sass/style.scss"])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat("style.scss", {newLine: "\r\n"}))
     .pipe(gulp.dest("source/sass"))
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss(processors))
+    .pipe(beautify.css({
+      "indent_size": 2,
+      "indent_with_tabs": false,
+      "end-with-newline": true
+    }))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("source/css"))
 });
@@ -121,7 +126,7 @@ gulp.task("browser-sync", function () {
 
 gulp.task("source", function () {
   gulp.watch("source/pug/**/*.pug", gulp.parallel("pug"));
-  gulp.watch("source/sass/blocks/**/*.scss", gulp.parallel("sass"));
+  gulp.watch(["source/sass/blocks/**/*.scss", "source/sass/common/**/*.scss"], gulp.parallel("sass"));
   gulp.watch("source/js/blocks/*.js", gulp.parallel("js"));
 });
 

@@ -1,0 +1,29 @@
+@mixin layout($color: black) {
+  background-color: rgba($color, 0.1);
+  outline: 2px solid black;
+}
+
+@mixin text($font-weight, $font-size, $line-height) {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: normal;
+}
+
+@mixin icon($name-icon, $width-icon, $height-icon) {
+  display: inline-block;
+  vertical-align: middle;
+  width: $width-icon;
+  height: $height-icon;
+  content: "";
+  background-image: url("../img/#{$name-icon}");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bg-icon($name-icon, $horizontal: center, $vertical: center) {
+  background-image: url("../img/#{$name-icon}");
+  background-repeat: no-repeat;
+  background-position: $vertical $horizontal;
+}

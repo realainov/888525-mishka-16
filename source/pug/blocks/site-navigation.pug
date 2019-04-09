@@ -1,11 +1,13 @@
 nav.site-header__site-navigation.site-navigation
-  button.site-navigation__menu-toggle(type="button" title="Открыть меню") Открыть меню
+  button.site-navigation__menu-toggle(type="button" title="Открыть меню")
   ul.site-navigation__list
     li.site-navigation__item
       a.site-navigation__link(href="catalog.html") Каталог товаров
     li.site-navigation__item
       a.site-navigation__link(href="form.html") Вязание на заказ
     li.site-navigation__item
-      a.site-navigation__link(href="#") Поиск по сайту
+      a.site-navigation__link.site-navigation__link--search(href="#") Поиск по сайту
+        include ../svg/icon-search
     li.site-navigation__item
-      a.site-navigation__link(href="#") Корзина: пока пуста
+      a.site-navigation__link.site-navigation__link--cart(href="#") Корзина: пока пуста
+        include ../svg/icon-cart
