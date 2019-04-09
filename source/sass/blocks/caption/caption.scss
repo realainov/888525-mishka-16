@@ -1,0 +1,5 @@
+.caption {
+  @include text(800, 19px, 19px);
+  display: flex;
+  align-items: center;
+}

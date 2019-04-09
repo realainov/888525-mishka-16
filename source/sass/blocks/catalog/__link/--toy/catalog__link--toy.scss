@@ -1,0 +1,7 @@
+.catalog__link--toy {
+  &::after {
+    @include icon("icon-toy.svg", 60px, 60px);
+    margin-top: -32px;
+    right: 28px;
+  }
+}

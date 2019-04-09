@@ -1,0 +1,5 @@
+.goods__price {
+  @include text(800, 15px, 24px);
+  margin: 0 25px;
+  text-align: left;
+}

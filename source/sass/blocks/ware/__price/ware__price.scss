@@ -1,0 +1,7 @@
+.ware__price {
+  @include text(800, 17px, 24px);
+  display: block;
+  margin-bottom: 25px;
+  color: $text-color;
+  text-align: center;
+}

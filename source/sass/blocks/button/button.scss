@@ -1,0 +1,9 @@
+.button {
+  @include text(800, 17px, 20px);
+  display: block;
+  padding: 15px 0;
+  border: 2px solid $text-color;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+}

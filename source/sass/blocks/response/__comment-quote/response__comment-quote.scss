@@ -1,0 +1,5 @@
+.response__comment-quote {
+  @include text(400, 15px, 30px);
+  margin: 0 0 30px;
+  color: $text-color;
+}

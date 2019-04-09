@@ -1,0 +1,7 @@
+.ware__best-article {
+  @include text(800, 17px, 20px);
+  display: block;
+  margin-bottom: 25px;
+  color: $seafoam-blue;
+  text-transform: uppercase;
+}

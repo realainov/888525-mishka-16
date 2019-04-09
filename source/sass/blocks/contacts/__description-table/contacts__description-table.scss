@@ -1,0 +1,6 @@
+.contacts__description-table {
+  @include text(400, 15px, 30px);
+  margin: 0 28px 10px;
+  color: $text-color;
+  border-collapse: collapse;
+}

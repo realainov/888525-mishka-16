@@ -1,0 +1,6 @@
+.production {
+  @include bg-icon("icon-video.svg", 28px, 30px);
+  margin: 0 30px 58px;
+  padding: 20px 0 30px;
+  border: 1px solid $border-color;
+}

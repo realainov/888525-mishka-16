@@ -1,0 +1,7 @@
+.ware__description-table {
+  @include text(400, 15px, 20px);
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  color: $text-color;
+}

@@ -1,0 +1,5 @@
+.ware__text {
+  @include text(400, 15px, 24px);
+  margin-bottom: 17px;
+  color: $text-color;
+}

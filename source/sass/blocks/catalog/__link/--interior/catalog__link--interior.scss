@@ -1,0 +1,7 @@
+.catalog__link--interior {
+  &::after {
+    @include icon("icon-interior.svg", 40px, 62px);
+    margin-top: -27px;
+    right: 38px;
+  }
+}

@@ -1,0 +1,5 @@
+.response__comment-item {
+  &:not(:first-child) {
+    display: none;
+  }
+}

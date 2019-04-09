@@ -1,0 +1,13 @@
+.site-navigation__link {
+  display: block;
+  padding: 25px 0 28px 76px;
+  position: relative;
+  border: 1px solid transparent;
+  border-bottom-color: $border-color;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    opacity: 0.2;
+  }
+}
