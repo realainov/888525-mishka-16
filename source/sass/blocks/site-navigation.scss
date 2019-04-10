@@ -1,0 +1,50 @@
+.site-navigation {
+
+}
+
+.site-navigation__menu-toggle {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 31px;
+  right: 31px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-menu-close.svg");
+}
+
+.site-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation__item {
+
+}
+
+.site-navigation__link {
+  display: block;
+  padding: 25px 0 28px 76px;
+  position: relative;
+  border: 1px solid transparent;
+  border-bottom-color: $border-color;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    opacity: 0.2;
+  }
+}
+
+.site-navigation__link--cart {
+  svg {
+    margin-top: -8px;
+  }
+}
+
+.site-navigation__link--search {
+  svg {
+    margin-top: -7px;
+  }
+}

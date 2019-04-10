@@ -1,0 +1,13 @@
+.caption {
+  @include text(700, 19px, 19px);
+  display: flex;
+  align-items: center;
+}
+
+.caption__htmlacademy {
+  display: block;
+  margin-left: 30px;
+  svg {
+    fill: $seafoam-blue;
+  }
+}

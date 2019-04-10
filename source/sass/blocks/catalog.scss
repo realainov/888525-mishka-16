@@ -1,0 +1,60 @@
+.catalog {
+  $image-color: #fafafa;
+  padding-top: 70px;
+  background-color: $image-color;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-position: center -18px;
+  text-align: center;
+}
+
+.catalog__title {
+  @include text(700, 27px, 30px);
+  display: block;
+  width: 274px;
+  margin: 0 auto 122px;
+}
+
+.catalog__list {
+  @include text(700, 19px, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  @for $i from 1 through 2 {
+    &:nth-child(#{$i}) {
+      $percent: 3.4% * (-1 + $i);
+      background-color: darken($seafoam-blue, $percent);
+    }
+  }
+}
+
+.catalog__link {
+  display: block;
+  padding: 26px 180px 30px 28px;
+  position: relative;
+  color: white;
+  text-align: left;
+  &::after {
+    position: absolute;
+    top: 50%;
+    opacity: 0.5;
+  }
+}
+
+.catalog__link--interior {
+  &::after {
+    @include icon("icon-interior.svg", 40px, 62px);
+    margin-top: -27px;
+    right: 38px;
+  }
+}
+
+.catalog__link--toy {
+  &::after {
+    @include icon("icon-toy.svg", 60px, 60px);
+    margin-top: -32px;
+    right: 28px;
+  }
+}

@@ -1,0 +1,82 @@
+.response {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 90%;
+}
+
+.response__container {
+  padding: 54px 30px 50px 30px;
+}
+
+.response__title {
+  margin-bottom: 24px;
+}
+
+.response__comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.response__comment-item {
+  &:not(:first-child) {
+    display: none;
+  }
+}
+
+.response__comment-quote {
+  @include text(400, 15px, 30px);
+  margin: 0 0 30px;
+  color: $text-color;
+}
+
+.response__comment-author {
+  @include text(700, 17px, 24px);
+  display: block;
+  margin-bottom: 4px;
+  font-style: normal;
+}
+
+.response__comment-tag {
+  @include text(400, 17px, 30px);
+  display: block;
+  margin-bottom: 30px;
+  color: $text-color;
+  font-style: normal;
+}
+
+.response__control-list {
+  display: flex;
+  margin: 0 auto 35px;
+  padding: 0;
+  border: 1px solid $border-color;
+  list-style: none;
+}
+
+.response__control-item {
+  &:first-child {
+    border-right: 1px solid $border-color;
+  }
+}
+
+.response__control-button {
+  width: 130px;
+  height: 45px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.response__control-button--next {
+  background-image: url("../img/icon-right-arrow.svg");
+}
+
+.response__control-button--prev {
+  background-image: url("../img/icon-left-arrow.svg");
+}
+
+.response__write-button {
+
+}

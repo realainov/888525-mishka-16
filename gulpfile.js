@@ -54,7 +54,7 @@ gulp.task("html-build", function () {
 gulp.task("sass", function () {
 
   const processors = [
-    //autoprefixer({browsers: ["last 2 version"]}),
+    autoprefixer({browsers: ["last 2 version"]}),
     sorting({
       "order": [
         "custom-properties",
@@ -108,7 +108,7 @@ gulp.task("js-build", function () {
 });
 
 gulp.task("img-build", function () {
-  return gulp.src("app/img/*", {since: gulp.lastRun("img")})
+  return gulp.src("app/img/*")
     .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
 });

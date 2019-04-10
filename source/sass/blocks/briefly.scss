@@ -1,0 +1,44 @@
+.briefly {
+  padding: 28px 23px 0 23px;
+}
+
+.briefly__title {
+  margin-bottom: 5px;
+}
+
+.briefly__list {
+  @include text(700, 17px, 20px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.briefly__item {
+  width: 230px;
+  padding: 83px 7px 0 7px;
+}
+
+.briefly___item--ball {
+  @include bg-icon("icon-feature-ball.svg", 30px, 8px);
+}
+
+.briefly___item--flower {
+  @include bg-icon("icon-feature-flower.svg", 26px, 12px);
+}
+
+.briefly___item--gift {
+  @include bg-icon("icon-feature-gift.svg", 28px, 10px);
+}
+
+.briefly___item--heart {
+  @include bg-icon("icon-feature-heart.svg", 32px, 12px);
+}
+
+.briefly___item--money {
+  @include bg-icon("icon-feature-money.svg", 28px, 6px);
+}
+
+.briefly___item--rocket {
+  @include bg-icon("icon-feature-rocket.svg", 30px, 0);
+  width: 270px;
+}
