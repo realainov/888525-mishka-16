@@ -69,11 +69,9 @@ gulp.task("sass", function () {
     })
   ];
 
-  return gulp.src(["source/sass/**/*.scss", "!source/sass/style.scss"])
+  return gulp.src(["source/sass/style.scss"])
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(concat("style.scss", {newLine: "\r\n"}))
-    .pipe(gulp.dest("source/sass"))
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss(processors))
     .pipe(beautify.css({

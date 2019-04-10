@@ -1,8 +1,0 @@
-.catalog__item {
-  @for $i from 1 through 2 {
-    &:nth-child(#{$i}) {
-      $percent: 3.4% * (-1 + $i);
-      background-color: darken($seafoam-blue, $percent);
-    }
-  }
-}

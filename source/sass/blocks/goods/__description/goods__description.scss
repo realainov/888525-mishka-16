@@ -1,9 +1,0 @@
-.goods__description {
-  @include text(400, 13px, 30px);
-  display: block;
-  margin: 0 25px 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $border-color;
-  color: $text-color;
-  text-align: left;
-}

@@ -9,8 +9,10 @@ html {
 }
 
 body {
+  @include text(400, 13px, 24px);
   width: 320px;
   margin: 0 auto;
+  color: $text-color;
 }
 
 a {
