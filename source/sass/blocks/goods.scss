@@ -1,0 +1,65 @@
+.goods {
+
+}
+
+.goods__title {
+  @include text(700, 27px, 30px);
+  margin-bottom: 30px;
+  padding: 70px 0 76px;
+  background-color: $footer-color;
+  text-align: center;
+}
+
+.goods__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goods__item {
+  margin: 0 30px 30px;
+  padding-bottom: 28px;
+  border: 1px solid $border-color;
+  position: relative;
+  svg {
+    position: absolute;
+    right: 27px;
+    opacity: 0.2;
+  }
+}
+
+.goods__img-link {
+
+}
+
+.goods__img {
+  margin-bottom: 22px;
+}
+
+.goods__item-link {
+  @include text(700, 17px, 24px);
+  margin: 0 25px 5px;
+  display: block;
+}
+
+.goods__description {
+  @include text(400, 13px, 30px);
+  display: block;
+  margin: 0 25px 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+  color: $text-color;
+  text-align: left;
+}
+
+.goods__price {
+  @include text(700, 15px, 24px);
+  margin: 0 25px;
+  text-align: left;
+}
+
+.goods__basket {
+
+}

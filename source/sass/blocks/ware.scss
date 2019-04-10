@@ -1,0 +1,65 @@
+.ware {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 90%;
+}
+
+.ware__container {
+  padding: 28px 30px 40px 30px;
+}
+
+.ware__title {
+  margin-bottom: 2px;
+}
+
+.ware__best-article {
+  @include text(700, 17px, 20px);
+  display: block;
+  margin-bottom: 25px;
+  color: $seafoam-blue;
+  text-transform: uppercase;
+}
+
+.ware__text {
+  @include text(400, 15px, 24px);
+  margin-bottom: 17px;
+  color: $text-color;
+}
+
+.ware__description-table {
+  @include text(400, 15px, 20px);
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  color: $text-color;
+}
+
+.ware__description-row {
+  border: 1px solid transparent;
+  border-bottom-color: $border-color;
+}
+
+.ware__description-col {
+  padding: 10px 0;
+  &:first-child {
+    width: 95px;
+    padding-right: 10px;
+  }
+}
+
+.ware__img {
+  margin-bottom: 17px;
+}
+
+.ware__price {
+  @include text(700, 17px, 24px);
+  display: block;
+  margin-bottom: 25px;
+  color: $text-color;
+  text-align: center;
+}
+
+.ware__order-button {
+
+}

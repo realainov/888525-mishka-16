@@ -1,0 +1,31 @@
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 28px 30px 28px 30px;
+  background-color: $footer-color;
+}
+
+.site-footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0 60px 20px;
+  border-bottom: 1px solid $border-color;
+  list-style: none;
+}
+
+.site-footer__social-item {
+
+}
+
+.site-footer__social-link {
+
+}
+
+.site-footer__caption {
+
+}
