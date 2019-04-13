@@ -39,10 +39,10 @@
   <main class="site-main">
     <h1 class="visually-hidden">Вязание на заказ / Интернет-магазин «MISHKA»</h1>
     <section class="order site-main__order">
-      <h2 class="title order-form__title">Вязание на заказ</h2>
-      <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <h2 class="title order__title">Вязание на заказ</h2>
+      <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form order__order-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="order-form__fieldset order-form__type">
+        <fieldset class="order-form__fieldset order-form__type-fieldset">
           <legend class="order-form__legend order-form__type-legend">Тип</legend>
           <ul class="order-form__list order-form__type-list">
             <li class="order-form__item order-form__type-item">
@@ -55,7 +55,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__color">
+        <fieldset class="order-form__fieldset order-form__color-fieldset">
           <legend class="order-form__legend order-form__color-legend">Цвет</legend>
           <ul class="order-form__list order-form__color-list">
             <li class="order-form__item order-form__color-item">
@@ -84,7 +84,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__fullname">
+        <fieldset class="order-form__fieldset order-form__fullname-fieldset">
           <legend class="order-form__legend order-form__fullname-legend">ФИО</legend>
           <ul class="order-form__list order-form__fullname-list">
             <li class="order-form__item order-form__fullname-item">
@@ -101,17 +101,19 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__number">
-          <legend class="order-form__legend order-form__number-legend">Тел</legend>
-          <input class="order-form__field order-form__field--phone" name="phone-number" id="phone-number-field" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+        <fieldset class="order-form__fieldset order-form__phone-fieldset">
+          <legend class="order-form__legend order-form__phone-legend">Тел</legend>
+          <input class="order-form__field order-form__phone-field" name="phone" id="phone-field" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          <label class="order-form__label order-form__phone-label" for="phone-field"></label>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__mail">
-          <legend class="order-form__legend order-form__mail-legend">E-mail</legend>
-          <input class="order-form__field order-form__field--email" name="email" id="email-field" type="email" placeholder="Ваш Email*" required>
+        <fieldset class="order-form__fieldset order-form__email-fieldset">
+          <legend class="order-form__legend order-form__email-legend">E-mail</legend>
+          <input class="order-form__field order-form__email-field" name="email" id="email-field" type="email" placeholder="Ваш Email*" required>
+          <label class="order-form__label order-form__email-label" for="email-field"></label>
         </fieldset>
-        <fieldset class="order-form__fieldset order-form__add">
+        <fieldset class="order-form__fieldset order-form__add-fieldset">
           <legend class="order-form__legend order-form__add-legend">Доп</legend>
-          <textarea class="order-form__textarea" name="addition" id="addition-field"></textarea>
+          <textarea class="order-form__textarea order-form__add-textarea" name="addition" id="addition-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <span class="order-form__required">*Поля обязательны для заполнения</span>
         <button class="button order-form__submit-button" type="submit">Отправить заказ</button>
