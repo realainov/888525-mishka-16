@@ -1,7 +1,8 @@
 .caption {
-  @include text(700, 19px, 19px);
+  @include text(19px, 19px, 700);
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .caption__htmlacademy {

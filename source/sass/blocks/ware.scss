@@ -14,7 +14,7 @@
 }
 
 .ware__best-article {
-  @include text(700, 17px, 20px);
+  @include text(17px, 20px, 700);
   display: block;
   margin-bottom: 25px;
   color: $seafoam-blue;
@@ -22,13 +22,13 @@
 }
 
 .ware__text {
-  @include text(400, 15px, 24px);
+  @include text(15px, 24px);
   margin-bottom: 17px;
   color: $text-color;
 }
 
 .ware__description-table {
-  @include text(400, 15px, 20px);
+  @include text(15px, 20px);
   width: 100%;
   margin-bottom: 30px;
   border-collapse: collapse;
@@ -53,7 +53,7 @@
 }
 
 .ware__price {
-  @include text(700, 17px, 24px);
+  @include text(17px, 24px, 700);
   display: block;
   margin-bottom: 25px;
   color: $text-color;

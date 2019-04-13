@@ -3,12 +3,12 @@
 }
 
 .contacts__title {
-  @include text(700, 18px, 30px);
+  @include text(18px, 30px, 700);
   margin: 0 28px 23px;
 }
 
 .contacts__description-table {
-  @include text(400, 15px, 30px);
+  @include text(15px, 30px);
   margin: 0 28px 10px;
   color: $text-color;
   border-collapse: collapse;

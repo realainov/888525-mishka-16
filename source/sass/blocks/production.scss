@@ -1,12 +1,11 @@
 .production {
   @include bg-icon("icon-video.svg", 28px, 30px);
-  margin: 0 30px 58px;
   padding: 20px 0 30px;
   border: 1px solid $border-color;
 }
 
 .production__title {
-  @include text(700, 17px, 24px);
+  @include text(17px, 24px, 700);
   margin: 0 0 27px 88px;
 }
 
@@ -19,7 +18,7 @@
 }
 
 .production__text {
-  @include text(400, 13px, 24px);
+  @include text(13px, 24px);
   margin: 0 40px 24px 32px;
   color: $text-color;
 }

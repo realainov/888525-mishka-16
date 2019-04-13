@@ -1,5 +1,5 @@
 .button {
-  @include text(700, 17px, 20px);
+  @include text(17px, 20px, 700);
   display: block;
   padding: 15px 0;
   border: 2px solid $text-color;

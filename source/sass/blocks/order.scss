@@ -2,6 +2,19 @@
 
 }
 
-.order__order-form {
+.order__title {
+  @include text(27px, 30px, 700);
+  margin-bottom: 23px;
+  padding: 70px 0 76px;
+  background-color: $footer-color;
+  text-align: center;
+}
 
+.order__text {
+  @include text(13px, 24px);
+  margin: 0 30px 22px;
+}
+
+.order__order-form {
+  margin: 0 27px;
 }

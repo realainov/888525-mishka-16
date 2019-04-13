@@ -3,7 +3,7 @@
 }
 
 .goods__title {
-  @include text(700, 27px, 30px);
+  @include text(27px, 30px, 700);
   margin-bottom: 30px;
   padding: 70px 0 76px;
   background-color: $footer-color;
@@ -39,13 +39,13 @@
 }
 
 .goods__item-link {
-  @include text(700, 17px, 24px);
+  @include text(17px, 24px, 700);
   margin: 0 25px 5px;
   display: block;
 }
 
 .goods__description {
-  @include text(400, 13px, 30px);
+  @include text(13px, 30px);
   display: block;
   margin: 0 25px 20px;
   padding-bottom: 20px;
@@ -55,8 +55,9 @@
 }
 
 .goods__price {
-  @include text(700, 15px, 24px);
+  @include text(15px, 24px, 700);
   margin: 0 25px;
+  color: black;
   text-align: left;
 }
 

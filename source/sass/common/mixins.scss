@@ -3,7 +3,7 @@
   outline: 2px solid black;
 }
 
-@mixin text($font-weight, $font-size, $line-height) {
+@mixin text($font-size, $line-height, $font-weight: 400) {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: $font-weight;
   font-size: $font-size;
