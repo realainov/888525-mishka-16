@@ -8,7 +8,7 @@
 }
 
 .order-form__legend {
-  @include text(800, 17px, 17px);
+  @include text(17px, 17px, 700);
   width: 100%;
   position: relative;
   color: $seafoam-blue;
@@ -92,7 +92,7 @@
 }
 
 .order-form__field {
-  @include text(400, 17px, 18px);
+  @include text(17px, 18px);
   width: 100%;
   height: 52px;
   margin-bottom: 24px;
@@ -103,7 +103,7 @@
 }
 
 .order-form__textarea {
-  @include text(400, 17px, 18px);
+  @include text(17px, 18px);
   width: 100%;
   height: 142px;
   padding: 15px;
@@ -114,8 +114,9 @@
 }
 
 .order-form__label {
-  @include text(800, 17px, 18px);
+  @include text(17px, 18px, 700);
   position: relative;
+  color: black;
 }
 
 .order-form__add-fieldset {
@@ -236,7 +237,7 @@
 }
 
 .order-form__phone-field {
-  @include text(400, 19px, 19px);
+  @include text(19px, 19px);
 }
 
 .order-form__type-fieldset {
@@ -269,7 +270,7 @@
 }
 
 .order-form__required {
-  @include text(400, 14px, 16px);
+  @include text(14px, 16px);
   display: block;
   margin-bottom: 34px;
   color: $text-color;

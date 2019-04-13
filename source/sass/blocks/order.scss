@@ -1,9 +1,9 @@
 .order {
-  margin-bottom: 52px;
+
 }
 
 .order__title {
-  @include text(700, 27px, 30px);
+  @include text(27px, 30px, 700);
   margin-bottom: 23px;
   padding: 70px 0 76px;
   background-color: $footer-color;
@@ -11,7 +11,7 @@
 }
 
 .order__text {
-  @include text(400, 13px, 24px);
+  @include text(13px, 24px);
   margin: 0 30px 22px;
 }
 

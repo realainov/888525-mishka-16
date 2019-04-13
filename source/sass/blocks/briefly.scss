@@ -7,7 +7,7 @@
 }
 
 .briefly__list {
-  @include text(700, 17px, 20px);
+  @include text(17px, 20px, 700);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -16,6 +16,7 @@
 .briefly__item {
   width: 230px;
   padding: 83px 7px 0 7px;
+  color: black;
 }
 
 .briefly___item--ball {

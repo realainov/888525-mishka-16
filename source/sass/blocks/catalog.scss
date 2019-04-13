@@ -8,14 +8,14 @@
 }
 
 .catalog__title {
-  @include text(700, 27px, 30px);
+  @include text(27px, 30px, 700);
   display: block;
   width: 274px;
   margin: 0 auto 122px;
 }
 
 .catalog__list {
-  @include text(700, 19px, 24px);
+  @include text(19px, 24px, 700);
   margin: 0;
   padding: 0;
   list-style: none;

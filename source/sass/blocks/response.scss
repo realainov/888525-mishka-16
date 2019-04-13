@@ -26,20 +26,21 @@
 }
 
 .response__comment-quote {
-  @include text(400, 15px, 30px);
+  @include text(15px, 30px);
   margin: 0 0 30px;
   color: $text-color;
 }
 
 .response__comment-author {
-  @include text(700, 17px, 24px);
+  @include text(17px, 24px, 700);
   display: block;
   margin-bottom: 4px;
+  color: black;
   font-style: normal;
 }
 
 .response__comment-tag {
-  @include text(400, 17px, 30px);
+  @include text(17px, 30px);
   display: block;
   margin-bottom: 30px;
   color: $text-color;
