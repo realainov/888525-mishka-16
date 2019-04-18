@@ -80,7 +80,7 @@ gulp.task("sass", function () {
       "end-with-newline": true
     }))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("source/css"));
 });
 
 gulp.task("css-build", function () {
@@ -124,7 +124,7 @@ gulp.task("browser-sync", function () {
 
 gulp.task("source", function () {
   gulp.watch("source/pug/**/*.pug", gulp.parallel("pug"));
-  gulp.watch(["source/sass/blocks/**/*.scss", "source/sass/common/**/*.scss"], gulp.parallel("sass"));
+  gulp.watch("source/sass/**/*.scss", gulp.parallel("sass"));
   gulp.watch("source/js/blocks/*.js", gulp.parallel("js"));
 });
 

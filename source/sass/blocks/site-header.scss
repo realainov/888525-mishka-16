@@ -6,22 +6,19 @@
   overflow: auto;
 }
 
-.site-header__container {
-  display: flex;
-  justify-content: center;
-  border: 1px solid transparent;
-  border-bottom-color: $border-color;
-}
-
-.site-header__logo {
-  display: inline-block;
-  margin: 21px auto 16px;
-}
-
-.site-header__logo-image {
-
-}
-
 .site-header__site-navigation {
 
+}
+
+.site-header__delivery {
+  @include text(15px, 24px);
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 52px;
+  color: $text-color;
+
+  @media ($tablet) {
+    display: block;
+  }
 }

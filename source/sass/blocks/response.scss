@@ -2,15 +2,39 @@
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
-  background-size: 90%;
+  background-size: 750px;
+
+  @media ($tablet) {
+    background-image:
+      url("../img/review@1x.jpg"),
+      url("../img/bg-zigzag-line.svg");
+    background-repeat:
+      no-repeat,
+      repeat-x;
+    background-position:
+      top left,
+      bottom center;
+    background-size:
+      auto,
+      750px;
+  }
 }
 
 .response__container {
   padding: 54px 30px 50px 30px;
+
+  @media ($tablet) {
+    padding: 80px 40px 100px 48px;
+    position: relative;
+  }
 }
 
 .response__title {
   margin-bottom: 24px;
+
+  @media ($tablet) {
+    margin-bottom: 47px;
+  }
 }
 
 .response__comment-list {
@@ -29,6 +53,11 @@
   @include text(15px, 30px);
   margin: 0 0 30px;
   color: $text-color;
+
+  @media ($tablet) {
+    @include text(17px, 30px);
+    margin: 0 0 59px 4px;
+  }
 }
 
 .response__comment-author {
@@ -37,6 +66,11 @@
   margin-bottom: 4px;
   color: black;
   font-style: normal;
+
+  @media ($tablet) {
+    @include text(18px, 24px, 700);
+    margin: 0 0 4px 2px;
+  }
 }
 
 .response__comment-tag {
@@ -45,6 +79,10 @@
   margin-bottom: 30px;
   color: $text-color;
   font-style: normal;
+
+  @media ($tablet) {
+    margin: 0 0 30px 2px;
+  }
 }
 
 .response__control-list {
@@ -53,21 +91,42 @@
   padding: 0;
   border: 1px solid $border-color;
   list-style: none;
+
+  @media ($tablet) {
+    border: none;
+    position: absolute;
+    bottom: 95px;
+    right: 50px;
+  }
 }
 
 .response__control-item {
-  &:first-child {
-    border-right: 1px solid $border-color;
+  width: 50%;
+
+  @media ($tablet) {
+    width: auto;
+  }
+}
+
+.response__control-item:first-child {
+  border-right: 1px solid $border-color;
+
+  @media ($tablet) {
+    border: none;
   }
 }
 
 .response__control-button {
-  width: 130px;
+  width: 100%;
   height: 45px;
   background-color: transparent;
-  background-position: center;
+  background-position: center 12px;
   background-repeat: no-repeat;
   border: none;
+
+  @media ($tablet) {
+    width: 88px;
+  }
 }
 
 .response__control-button--next {
@@ -79,5 +138,10 @@
 }
 
 .response__write-button {
-
+  @media ($tablet) {
+    padding: 15px 38px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+  }
 }

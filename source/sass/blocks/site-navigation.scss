@@ -6,45 +6,147 @@
   width: 21px;
   height: 21px;
   position: absolute;
-  top: 31px;
+  top: 24px;
   right: 31px;
   border: none;
   background-color: transparent;
   background-image: url("../img/icon-menu-close.svg");
+
+  @media ($tablet) {
+    display: none;
+  }
 }
 
 .site-navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .site-navigation__item {
+  display: flex;
+  border-bottom: 1px solid $border-color;
+
+  @media ($tablet) {
+    order: 4;
+
+    .site-navigation__link {
+      padding: 0;
+    }
+  }
+}
+
+.site-navigation__item:first-child {
+  @media ($tablet) {
+    flex-grow: 1;
+    order: 1;
+    width: 45%;
+  }
+
+  @media (min-width: 860px) {
+    width: 50%;
+  }
+}
+
+.site-navigation__top-item {
+  @media ($tablet) {
+    width: auto;
+    padding: 0;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.site-navigation__item:nth-of-type(2) {
+  @media ($tablet) {
+    padding: 17px 0 0 50px;
+  }
+}
+
+.site-navigation__item:nth-of-type(3) {
+  @media ($tablet) {
+    flex-grow: 1;
+  }
+}
+
+.site-navigation__bottom-item {
+  @media ($tablet) {
+    @include text(15px, 24px, 700);
+    padding: 17px 0 0 37px;
+    border-bottom: none;
+    background-color: $image-color;
+  }
+}
+
+.site-navigation__item--search {
+  svg {
+    margin-top: -7px;
+  }
+
+  @media ($tablet) {
+    order: 2;
+
+    .site-navigation__link {
+      padding: 25px 0 34px 82px;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+    }
+
+    svg {
+      margin-top: -10px;
+    }
+
+    .site-navigation__text {
+      display: none;
+    }
+  }
+}
+
+.site-navigation__item--cart {
+  svg {
+    margin-top: -8px;
+  }
+
+  @media ($tablet) {
+    order: 3;
+
+    .site-navigation__link {
+      padding: 25px 50px 34px 85px;
+    }
+
+    svg {
+      margin-top: -12px;
+    }
+  }
+}
+
+.site-navigation__logo {
+  display: flex;
+  margin: 18px auto 18px;
+
+  @media ($tablet) {
+    margin: 18px auto auto 50px;
+  }
+}
+
+.site-navigation__logo-image {
 
 }
 
 .site-navigation__link {
   display: block;
+  //margin: 0 auto;
   padding: 25px 0 28px 76px;
   position: relative;
-  border: 1px solid transparent;
-  border-bottom-color: $border-color;
+
   svg {
     position: absolute;
     top: 50%;
     left: 30px;
     opacity: 0.2;
-  }
-}
-
-.site-navigation__link--cart {
-  svg {
-    margin-top: -8px;
-  }
-}
-
-.site-navigation__link--search {
-  svg {
-    margin-top: -7px;
   }
 }

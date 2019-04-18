@@ -1,30 +1,58 @@
+$margin-right: 380px;
+
 .ware {
+  position: relative;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
-  background-size: 90%;
+  background-size: 750px;
 }
 
 .ware__container {
+  display: flex;
+  flex-direction: column;
   padding: 28px 30px 40px 30px;
+
+  @media ($tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 597px;
+    padding: 35px 51px 70px 51px;
+  }
 }
 
 .ware__title {
   margin-bottom: 2px;
+
+  @media ($tablet) {
+    margin-bottom: 48px;
+  }
 }
 
 .ware__best-article {
   @include text(17px, 20px, 700);
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   color: $seafoam-blue;
   text-transform: uppercase;
+
+  @media ($tablet) {
+    @include text(17px, 17px, 700);
+    width: 70px;
+    margin: 10px 30px 0 auto;
+    text-align: center;
+  }
 }
 
 .ware__text {
   @include text(15px, 24px);
   margin-bottom: 17px;
   color: $text-color;
+
+  @media ($tablet) {
+    @include text(17px, 30px);
+    margin: 0 $margin-right 35px 0;
+  }
 }
 
 .ware__description-table {
@@ -33,6 +61,10 @@
   margin-bottom: 30px;
   border-collapse: collapse;
   color: $text-color;
+
+  @media ($tablet) {
+    margin: 0 $margin-right 58px 0;
+  }
 }
 
 .ware__description-row {
@@ -48,8 +80,23 @@
   }
 }
 
+.ware__img-container {
+  width: 260px;
+  height: 315px;
+  margin: 0 auto 22px;
+  overflow: hidden;
+
+  @media ($tablet) {
+    width: 333px;
+    height: 404px;
+    position: absolute;
+    top: 140px;
+    right: 51px;
+  }
+}
+
 .ware__img {
-  margin-bottom: 17px;
+
 }
 
 .ware__price {
@@ -58,8 +105,18 @@
   margin-bottom: 25px;
   color: $text-color;
   text-align: center;
+
+  @media ($tablet) {
+    @include text(20px, 24px, 700);
+    align-self: center;
+    width: 100%;
+    margin: 0 $margin-right 33px 0;
+  }
 }
 
 .ware__order-button {
-
+  @media ($tablet) {
+    width: 100%;
+    margin-right: $margin-right;
+  }
 }
