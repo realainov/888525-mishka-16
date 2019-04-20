@@ -16,7 +16,7 @@
       bottom center;
     background-size:
       auto,
-      750px;
+      100%;
   }
 }
 
@@ -24,6 +24,9 @@
   padding: 54px 30px 50px 30px;
 
   @media ($tablet) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 80px 40px 100px 48px;
     position: relative;
   }
@@ -33,6 +36,7 @@
   margin-bottom: 24px;
 
   @media ($tablet) {
+    order: 1;
     margin-bottom: 47px;
   }
 }
@@ -41,6 +45,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media ($tablet) {
+    order: 3;
+  }
 }
 
 .response__comment-item {
@@ -93,6 +101,7 @@
   list-style: none;
 
   @media ($tablet) {
+    order: 4;
     border: none;
     position: absolute;
     bottom: 95px;
@@ -139,9 +148,8 @@
 
 .response__write-button {
   @media ($tablet) {
+    order: 2;
+    margin: 0 11px 0 auto;
     padding: 15px 38px;
-    position: absolute;
-    top: 80px;
-    right: 50px;
   }
 }

@@ -23,7 +23,7 @@
       bottom: 0;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: 800px;
+      background-size: 100%;
       background-position: center top;
       content: "";
     }
@@ -35,6 +35,7 @@
   display: block;
   min-height: 210px;
   margin: 0 30px;
+
   @media ($tablet) {
     @include text(43px, 50px, 700);
     min-height: 474px;
@@ -74,15 +75,16 @@
   position: relative;
   color: white;
   text-align: left;
-  &::after {
-    position: absolute;
-    top: 50%;
-    opacity: 0.5;
-  }
 
   @media ($tablet) {
     min-height: 119px;
     padding: 26px 180px 42px 35px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    opacity: 0.5;
   }
 }
 

@@ -9,16 +9,3 @@
 .site-header__site-navigation {
 
 }
-
-.site-header__delivery {
-  @include text(15px, 24px);
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 52px;
-  color: $text-color;
-
-  @media ($tablet) {
-    display: block;
-  }
-}

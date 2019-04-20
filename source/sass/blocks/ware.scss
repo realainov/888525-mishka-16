@@ -1,11 +1,9 @@
-$margin-right: 380px;
-
 .ware {
   position: relative;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
-  background-size: 750px;
+  background-size: 100%;
 }
 
 .ware__container {
@@ -51,7 +49,7 @@ $margin-right: 380px;
 
   @media ($tablet) {
     @include text(17px, 30px);
-    margin: 0 $margin-right 35px 0;
+    margin: 0 380px 35px 0;
   }
 }
 
@@ -63,7 +61,7 @@ $margin-right: 380px;
   color: $text-color;
 
   @media ($tablet) {
-    margin: 0 $margin-right 58px 0;
+    margin: 0 380px 58px 0;
   }
 }
 
@@ -74,6 +72,7 @@ $margin-right: 380px;
 
 .ware__description-col {
   padding: 10px 0;
+
   &:first-child {
     width: 95px;
     padding-right: 10px;
@@ -96,7 +95,7 @@ $margin-right: 380px;
 }
 
 .ware__img {
-
+  //
 }
 
 .ware__price {
@@ -110,13 +109,13 @@ $margin-right: 380px;
     @include text(20px, 24px, 700);
     align-self: center;
     width: 100%;
-    margin: 0 $margin-right 33px 0;
+    margin: 0 380px 33px 0;
   }
 }
 
 .ware__order-button {
   @media ($tablet) {
     width: 100%;
-    margin-right: $margin-right;
+    margin-right: 380px;
   }
 }

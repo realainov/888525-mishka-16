@@ -1,5 +1,5 @@
 .order {
-
+  //
 }
 
 .order__title {
@@ -8,13 +8,32 @@
   padding: 70px 0 76px;
   background-color: $footer-color;
   text-align: center;
+
+  @media ($tablet) {
+    @include text(43px, 50px, 700);
+    margin-bottom: 60px;
+    padding: 54px 0 92px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    background-size: 100%;
+  }
 }
 
 .order__text {
   @include text(13px, 24px);
   margin: 0 30px 22px;
+
+  @media ($tablet) {
+    @include text(17px, 30px);
+    margin: 0 50px 72px;
+  }
 }
 
 .order__order-form {
   margin: 0 27px;
+
+  @media ($tablet) {
+    margin: 0;
+  }
 }

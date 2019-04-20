@@ -1,21 +1,21 @@
 .site-main {
-
+  //
 }
 
 .site-main__briefly {
-
+  //
 }
 
 .site-main__catalog {
-
+  //
 }
 
 .site-main__contacts {
-
+  //
 }
 
 .site-main__goods {
-
+  //
 }
 
 .site-main__order {
@@ -23,13 +23,17 @@
 }
 
 .site-main__production {
-  margin: 0 30px 58px;
+  margin: 0 29px 58px;
+
+  @media ($tablet) {
+    margin: 0 49px 58px;
+  }
 }
 
 .site-main__response {
-
+  //
 }
 
 .site-main__ware {
-
+  //
 }

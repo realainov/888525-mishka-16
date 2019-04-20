@@ -1,5 +1,6 @@
 doctype
 html(lang="ru")
+  include common/variables
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -14,20 +15,21 @@ html(lang="ru")
             a.site-navigation__logo
               picture.site-navigation__logo-image
                 //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
-                source(media="(min-width: 772px)" srcset="img/logo-tablet.svg")
+                source(media=tablet srcset="img/logo-tablet.svg")
                 img(src="img/logo-mobile.svg" alt="Логотип компании «MISHKA»")
-          li.site-navigation__item.site-navigation__bottom-item
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--hero
             a.site-navigation__link(href="catalog.html") Каталог товаров
-          li.site-navigation__item.site-navigation__bottom-item
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--hero
             a.site-navigation__link(href="form.html") Вязание на заказ
           li.site-navigation__item.site-navigation__top-item.site-navigation__item--search
             a.site-navigation__link(href="#")
               span.site-navigation__text Поиск по сайту
-              include svg/icon-search
+              include ../img/icon-search.svg
           li.site-navigation__item.site-navigation__top-item.site-navigation__item--cart
             a.site-navigation__link(href="#") Корзина: пока пуста
-              include svg/icon-cart
-      span.site-header__delivery Бесплатная доставка по России
+              include ../img/icon-cart.svg
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--hero
+            span.site-navigation__delivery Бесплатная доставка по России
     main.site-main
       h1.visually-hidden Главная страница / Интернет-магазин «MISHKA»
       section.catalog.site-main__catalog
@@ -56,7 +58,7 @@ html(lang="ru")
           div.ware__img-container
             picture.ware__img
               //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
-              source(media="(min-width: 772px)" srcset="img/triple-set-tablet@1x.jpg")
+              source(media=tablet srcset="img/triple-set-tablet@1x.jpg")
               img(src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок")
           span.ware__price Цена: 990 руб.
           a.button.ware__order-button(href="#") Заказать
@@ -106,7 +108,7 @@ html(lang="ru")
         div.contacts__map
           picture.contacts__img
             //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
-            source(media="(min-width: 772px)" srcset="img/map-tablet@1x.jpg")
+            source(media=tablet srcset="img/map-tablet@1x.jpg")
             img(src="img/map-mobile@1x.jpg" alt="Наше расположение")
         a.button.contacts__write-us-button(href="#") Написать нам
     include blocks/site-footer

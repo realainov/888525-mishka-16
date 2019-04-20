@@ -1,5 +1,5 @@
 .site-navigation {
-
+  //
 }
 
 .site-navigation__menu-toggle {
@@ -34,8 +34,10 @@
 
   @media ($tablet) {
     order: 4;
+  }
 
-    .site-navigation__link {
+  .site-navigation__link {
+    @media ($tablet) {
       padding: 0;
     }
   }
@@ -73,53 +75,76 @@
   }
 }
 
+.site-navigation__item:last-child {
+  @media ($tablet) {
+    padding-right: 50px;
+  }
+}
+
 .site-navigation__bottom-item {
   @media ($tablet) {
     @include text(15px, 24px, 700);
     padding: 17px 0 0 37px;
     border-bottom: none;
+  }
+}
+
+.site-navigation__bottom-item--hero {
+  @media ($tablet) {
     background-color: $image-color;
   }
 }
 
-.site-navigation__item--search {
-  svg {
-    margin-top: -7px;
+.site-navigation__bottom-item--footer {
+  @media ($tablet) {
+    background-color: $footer-color;
   }
+}
 
+.site-navigation__item--search {
   @media ($tablet) {
     order: 2;
+  }
 
-    .site-navigation__link {
+  svg {
+    margin-top: -7px;
+
+    @media ($tablet) {
+      margin-top: -10px;
+    }
+  }
+
+  .site-navigation__link {
+    @media ($tablet) {
       padding: 25px 0 34px 82px;
       border-left: 1px solid $border-color;
       border-right: 1px solid $border-color;
     }
+  }
 
-    svg {
-      margin-top: -10px;
-    }
-
-    .site-navigation__text {
+  .site-navigation__text {
+    @media ($tablet) {
       display: none;
     }
   }
 }
 
 .site-navigation__item--cart {
-  svg {
-    margin-top: -8px;
-  }
-
   @media ($tablet) {
     order: 3;
+  }
 
-    .site-navigation__link {
-      padding: 25px 50px 34px 85px;
-    }
+  svg {
+    margin-top: -8px;
 
-    svg {
+    @media ($tablet) {
       margin-top: -12px;
+    }
+  }
+
+  .site-navigation__link {
+    @media ($tablet) {
+      padding: 25px 50px 34px 85px;
     }
   }
 }
@@ -134,12 +159,11 @@
 }
 
 .site-navigation__logo-image {
-
+  //
 }
 
 .site-navigation__link {
   display: block;
-  //margin: 0 auto;
   padding: 25px 0 28px 76px;
   position: relative;
 
@@ -148,5 +172,15 @@
     top: 50%;
     left: 30px;
     opacity: 0.2;
+  }
+}
+
+.site-navigation__delivery {
+  @include text(15px, 24px);
+  display: none;
+  color: $text-color;
+
+  @media ($tablet) {
+    display: block;
   }
 }

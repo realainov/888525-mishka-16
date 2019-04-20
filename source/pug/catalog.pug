@@ -1,5 +1,6 @@
 doctype
 html(lang="ru")
+  include common/variables
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -7,10 +8,28 @@ html(lang="ru")
     title="Каталог товаров / Интернет-магазин «MISHKA»"
   body
     header.site-header
-      div.site-header__container
-        a.site-header__logo(href="index.html")
-          img.site-header__logo-image(src="img/mishka-logo.svg" width="86" height="35" alt="Логотип компании «MISHKA»")
-      include blocks/site-navigation
+      nav.site-header__site-navigation.site-navigation
+        button.site-navigation__menu-toggle(type="button" title="Открыть меню")
+        ul.site-navigation__list
+          li.site-navigation__item.site-navigation__top-item
+            a.site-navigation__logo(href="index.html")
+              picture.site-navigation__logo-image
+                //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
+                source(media=tablet srcset="img/logo-tablet.svg")
+                img(src="img/logo-mobile.svg" alt="Логотип компании «MISHKA»")
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--footer
+            a.site-navigation__link(href="catalog.html") Каталог товаров
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--footer
+            a.site-navigation__link(href="form.html") Вязание на заказ
+          li.site-navigation__item.site-navigation__top-item.site-navigation__item--search
+            a.site-navigation__link(href="#")
+              span.site-navigation__text Поиск по сайту
+              include ../img/icon-search.svg
+          li.site-navigation__item.site-navigation__top-item.site-navigation__item--cart
+            a.site-navigation__link(href="#") Корзина: пока пуста
+              include ../img/icon-cart.svg
+          li.site-navigation__item.site-navigation__bottom-item.site-navigation__bottom-item--footer
+            span.site-navigation__delivery Бесплатная доставка по России
     main.site-main
       h1.visually-hidden Каталог товаров / Интернет-магазин «MISHKA»
       section.goods.site-main__goods
@@ -18,32 +37,47 @@ html(lang="ru")
         ul.goods__list
           li.goods__item
             a.goods__img-link(href="#")
-              img.goods__img(src="img/photo-1.png")
-            a.goods__item-link(href="#") Зайчик-попрыгайчик
-            span.goods__description Рост 30 см, вес 200 г
-            span.goods__price 1 200 руб.
-            a.goods__basket(href="#" title="Добавить в корзину")
-              include svg/icon-cart
+              picture.goods__img
+                //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
+                source(media=tablet srcset="img/photo-hare-tablet@1x.jpg")
+                img(src="img/photo-hare-mobile@1x.jpg" alt="Изображение зайчика-попрыгайчика")
+            div.goods__item-container
+              a.goods__item-link(href="#") Зайчик-попрыгайчик
+              span.goods__description Рост 30 см, вес 200 г
+              span.goods__price 1 200 руб.
+              a.goods__basket(href="#" title="Добавить в корзину")
+                include ../img/icon-cart.svg
           li.goods__item
             a.goods__img-link(href="#")
-              img.goods__img(src="img/photo-2.png")
-            a.goods__item-link(href="#") Корзинка для белья
-            span.goods__description Диаметр 15 см, высота 10 см
-            span.goods__price 690 руб.
-            a.goods__basket(href="#" title="Добавить в корзину")
-              include svg/icon-cart
+              picture.goods__img
+                //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
+                source(media=tablet srcset="img/photo-bowl-tablet@1x.jpg")
+                img(src="img/photo-bowl-mobile@1x.jpg" alt="Изображение корзинки для белья")
+            div.goods__item-container
+              a.goods__item-link(href="#") Корзинка для белья
+              span.goods__description Диаметр 15 см, высота 10 см
+              span.goods__price 690 руб.
+              a.goods__basket(href="#" title="Добавить в корзину")
+                include ../img/icon-cart.svg
           li.goods__item
             a.goods__img-link(href="#")
-              img.goods__img(src="img/photo-3.png")
-            a.goods__item-link(href="#") Большая корзинка для&nbsp;игрушек
-            span.goods__description Диаметр 30 см, высота 30 см
-            span.goods__price 1 500 руб.
-            a.goods__basket(href="#" title="Добавить в корзину")
-              include svg/icon-cart
+              picture.goods__img
+                //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
+                source(media=tablet srcset="img/photo-toys-tablet@1x.jpg")
+                img(src="img/photo-toys-mobile@1x.jpg" alt="Изображение большой корзинки для игрушек")
+            div.goods__item-container
+              a.goods__item-link(href="#") Большая корзинка для&nbsp;игрушек
+              span.goods__description Диаметр 30 см, высота 30 см
+              span.goods__price 1 500 руб.
+              a.goods__basket(href="#" title="Добавить в корзину")
+                include ../img/icon-cart.svg
       section.production.site-main__production
         h2.title.production__title Процесс производства
         div.production__video
-          img.production__img(src="img/video.png" width="259" height="149" alt="Видео производства")
+          picture.production__img
+            //source(media="(max-width: 799px)" srcset="elva-480w.jpg")
+            source(media=tablet srcset="img/video-tablet@1x.jpg")
+            img(src="img/video-mobile@1x.jpg" alt="Видео производства")
         p.production__text По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         a.button.production__order-button(href="#") Сделать заказ
     include blocks/site-footer

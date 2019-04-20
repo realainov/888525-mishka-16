@@ -1,5 +1,5 @@
 .goods {
-
+  //
 }
 
 .goods__title {
@@ -8,6 +8,16 @@
   padding: 70px 0 76px;
   background-color: $footer-color;
   text-align: center;
+
+  @media ($tablet) {
+    @include text(43px, 50px, 700);
+    margin-bottom: 67px;
+    padding: 54px 0 92px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    background-size: 100%;
+  }
 }
 
 .goods__list {
@@ -19,48 +29,89 @@
 }
 
 .goods__item {
-  margin: 0 30px 30px;
-  padding-bottom: 28px;
+  margin: 0 29px 30px;
+  padding-bottom: 26px;
   border: 1px solid $border-color;
   position: relative;
+
+  @media ($tablet) {
+    display: flex;
+    margin: 0 49px 52px;
+    padding: 0;
+  }
+
   svg {
     position: absolute;
-    right: 27px;
+    right: 25px;
     opacity: 0.2;
+
+    @media ($tablet) {
+      bottom: 30px;
+      right: 30px;
+    }
   }
 }
 
 .goods__img-link {
-
+  //
 }
 
 .goods__img {
-  margin-bottom: 22px;
+  //
+}
+
+.goods__item-container {
+  padding: 27px 28px 0;
+
+  @media ($tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px 28px 29px;
+  }
 }
 
 .goods__item-link {
   @include text(17px, 24px, 700);
-  margin: 0 25px 5px;
+  margin: 0 0 5px;
   display: block;
+
+  @media ($tablet) {
+    @include text(20px, 24px, 700);
+    margin: 0 0 8px;
+  }
 }
 
 .goods__description {
   @include text(13px, 30px);
   display: block;
-  margin: 0 25px 20px;
+  margin: 0 0 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid $border-color;
   color: $text-color;
   text-align: left;
+
+  @media ($tablet) {
+    @include text(15px, 30px);
+    margin: 0;
+    border: 0;
+  }
 }
 
 .goods__price {
   @include text(15px, 24px, 700);
-  margin: 0 25px;
   color: black;
   text-align: left;
+
+  @media ($tablet) {
+    @include text(17px, 24px, 700);
+    display: block;
+    margin: auto 0 0 4px;
+    border-top: 1px solid $border-color;
+    padding-top: 20px;
+  }
 }
 
 .goods__basket {
-
+  //
 }
