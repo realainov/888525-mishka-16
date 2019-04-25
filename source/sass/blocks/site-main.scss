@@ -3,7 +3,15 @@
 }
 
 .site-main__briefly {
-  //
+  margin: 28px 23px 0 23px;
+
+  @media ($tablet) {
+    margin: 48px 0 55px;
+  }
+
+  @media ($desktop) {
+    margin: 60px 170px 0;
+  }
 }
 
 .site-main__catalog {
@@ -11,7 +19,15 @@
 }
 
 .site-main__contacts {
-  //
+  margin: 37px 0;
+
+  @media ($tablet) {
+    margin: 62px 0 55px;
+  }
+
+  @media ($desktop) {
+    margin: 78px 0 105px;
+  }
 }
 
 .site-main__goods {
@@ -20,20 +36,36 @@
 
 .site-main__order {
   margin-bottom: 52px;
+
+  @media ($desktop) {
+    margin-bottom: 48px;
+  }
 }
 
 .site-main__production {
   margin: 0 29px 58px;
 
   @media ($tablet) {
-    margin: 0 49px 58px;
+    margin: 0 0 58px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 104px;
   }
 }
 
 .site-main__response {
-  //
+  @media ($desktop) {
+    margin: 53px auto 0;
+  }
 }
 
 .site-main__ware {
-  //
+  @media ($tablet) {
+    margin: 35px 0 0;
+  }
+
+  @media ($desktop) {
+    margin: 68px auto 0;
+  }
 }

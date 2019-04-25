@@ -1,9 +1,19 @@
 .contacts {
-  padding: 37px 0;
+  position: relative;
 
   @media ($tablet) {
-    padding: 62px 0 37px;
     text-align: center;
+  }
+
+  @media ($desktop) {
+    display: flex;
+    padding: 0 0 0 122px;
+  }
+}
+
+.contacts__container {
+  @media ($desktop) {
+    padding-top: 70px;
   }
 }
 
@@ -13,6 +23,12 @@
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
+    margin: 0 0 48px;
+    text-align: left;
+  }
+
+  @media ($desktop) {
+    @include text(53px, 57px, 700);
     margin: 0 48px 48px;
     text-align: left;
   }
@@ -26,8 +42,12 @@
 
   @media ($tablet) {
     @include text(17px, 30px);
-    margin: 0 52px 59px;
+    margin: 0 0 59px;
     text-align: left;
+  }
+
+  @media ($desktop) {
+    margin: 0 20px 59px 52px;
   }
 }
 
@@ -35,10 +55,14 @@
   @media ($tablet) {
     display: flex;
   }
+
+  @media ($desktop) {
+    display: block;
+  }
 }
 
 .contacts__description-row {
-
+  //
 }
 
 .contacts__description-row:first-child {
@@ -53,6 +77,10 @@
 
   @media ($tablet) {
     padding-bottom: 0;
+  }
+
+  @media ($desktop) {
+    padding-bottom: 30px;
   }
 
   &:first-child {
@@ -80,7 +108,11 @@
   margin-bottom: 36px;
 
   @media ($tablet) {
-    margin-bottom: 45px;
+    margin-bottom: 53px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 0 auto;
   }
 }
 
@@ -89,8 +121,14 @@
 
   @media ($tablet) {
     display: inline-block;
-    margin: 0 0 20px;
+    margin: 0;
     padding: 15px 43px;
     vertical-align: middle;
+  }
+
+  @media ($desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 174px;
   }
 }

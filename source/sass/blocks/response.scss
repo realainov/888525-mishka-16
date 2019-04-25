@@ -18,6 +18,10 @@
       auto,
       100%;
   }
+
+  @media ($desktop) {
+    width: 1050px;
+  }
 }
 
 .response__container {
@@ -29,6 +33,10 @@
     flex-wrap: wrap;
     padding: 80px 40px 100px 48px;
     position: relative;
+  }
+
+  @media ($desktop) {
+    padding: 80px 0 150px 170px;
   }
 }
 
@@ -66,6 +74,10 @@
     @include text(17px, 30px);
     margin: 0 0 59px 4px;
   }
+
+  @media ($desktop) {
+    margin: 0 80px 40px 4px;
+  }
 }
 
 .response__comment-author {
@@ -78,6 +90,11 @@
   @media ($tablet) {
     @include text(18px, 24px, 700);
     margin: 0 0 4px 2px;
+  }
+
+  @media ($desktop) {
+    @include text(17px, 24px, 700);
+    margin: 0 0 2px 2px;
   }
 }
 
@@ -106,6 +123,11 @@
     position: absolute;
     bottom: 95px;
     right: 50px;
+  }
+
+  @media ($desktop) {
+    bottom: 145px;
+    right: 0;
   }
 }
 
@@ -151,5 +173,9 @@
     order: 2;
     margin: 0 11px 0 auto;
     padding: 15px 38px;
+  }
+
+  @media ($desktop) {
+    margin: 5px 0 0 auto;
   }
 }

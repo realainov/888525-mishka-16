@@ -2,21 +2,32 @@
   //
 }
 
+.goods__title-wrapper {
+  @media ($tablet) {
+    margin: 0 0 67px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 114px;
+  }
+}
+
 .goods__title {
   @include text(27px, 30px, 700);
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   padding: 70px 0 76px;
-  background-color: $footer-color;
   text-align: center;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
-    margin-bottom: 67px;
+    margin: 0 50px + 100px;
     padding: 54px 0 92px;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-position: bottom center;
-    background-size: 100%;
+  }
+
+  @media ($desktop) {
+    @include text(53px, 57px, 700);
+    margin: 0 calc((100% - 1150px) / 2 + 50px + 150px);
+    padding: 54px 0 115px;
   }
 }
 
@@ -26,6 +37,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media ($desktop) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .goods__item {
@@ -36,19 +52,14 @@
 
   @media ($tablet) {
     display: flex;
-    margin: 0 49px 52px;
+    margin: 0 0 52px;
     padding: 0;
   }
 
-  svg {
-    position: absolute;
-    right: 25px;
-    opacity: 0.2;
-
-    @media ($tablet) {
-      bottom: 30px;
-      right: 30px;
-    }
+  @media ($desktop) {
+    flex-direction: column;
+    width: 318px;
+    margin: 0 0 55px;
   }
 }
 
@@ -65,9 +76,14 @@
 
   @media ($tablet) {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
     padding: 25px 28px 29px;
+  }
+
+  @media ($desktop) {
+    height: 100%;
   }
 }
 
@@ -79,6 +95,10 @@
   @media ($tablet) {
     @include text(20px, 24px, 700);
     margin: 0 0 8px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 6px;
   }
 }
 
@@ -94,7 +114,12 @@
   @media ($tablet) {
     @include text(15px, 30px);
     margin: 0;
+    padding: 0;
     border: 0;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 15px;
   }
 }
 
@@ -110,8 +135,19 @@
     border-top: 1px solid $border-color;
     padding-top: 20px;
   }
+
+  @media ($desktop) {
+    margin: auto 0 0;
+  }
 }
 
 .goods__basket {
-  //
+  position: absolute;
+  right: 25px;
+  opacity: 0.2;
+
+  @media ($tablet) {
+    bottom: 25px;
+    right: 33px;
+  }
 }

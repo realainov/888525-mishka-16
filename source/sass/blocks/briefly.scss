@@ -1,48 +1,57 @@
 .briefly {
-  padding: 28px 23px 0 23px;
-
-  @media ($tablet) {
-    margin-bottom: 55px;
-    padding: 48px 45px 0 45px;
-  }
+  //
 }
 
 .briefly__title {
-  margin: 0 0 5px 4px;
+  margin: 0 0 5px;
 
   @media ($tablet) {
-    margin-bottom: 18px;
+    margin: 0 0 18px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 20px;
   }
 }
 
 .briefly__list {
   @include text(17px, 20px, 700);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 
   @media ($tablet) {
     @include text(20px, 22px, 700);
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    margin-left: -7px;
+  }
+
+  @media ($desktop) {
+    margin-left: -4px;
   }
 }
 
 .briefly__item {
-  margin-right: 60px;
-  padding: 83px 0 0 7px;
+  width: 274px;
+  margin: 0 14px 0 0;
+  padding: 83px 20px 0 7px;
   color: black;
 
   @media ($tablet) {
-    width: 280px;
-    margin-bottom: 29px;
+    width: 320px;
+    margin: 0 14px 29px 0;
+    padding: 83px 40px 0 7px;
+  }
+
+  @media ($desktop) {
+    margin: 0 30px 29px 0;
   }
 }
 
 .briefly___item--ball {
   @include bg-icon("icon-feature-ball.svg", 8px, 30px);
-  margin-right: 20px;
 
   @media ($tablet) {
     order: 2;
@@ -55,7 +64,6 @@
 
   @media ($tablet) {
     order: 1;
-    margin-right: 55px;
     background-position: 15px 30px;
   }
 }
@@ -74,7 +82,6 @@
 
   @media ($tablet) {
     order: 5;
-    margin-right: 55px;
     background-position: 15px 35px;
   }
 }
@@ -84,18 +91,17 @@
 
   @media ($tablet) {
     order: 3;
-    margin-right: 55px;
     background-position: 6px 32px;
   }
 }
 
 .briefly___item--rocket {
   @include bg-icon("icon-feature-rocket.svg", 0, 30px);
-  margin-right: 10px;
+  padding: 83px 0 0 7px;
 
   @media ($tablet) {
     order: 4;
-    width: 320px;
+    padding: 83px 0 0 7px;
     background-position: 0 35px;
   }
 }

@@ -1,0 +1,9 @@
+.center-wrapper {
+  @media ($tablet) {
+    margin: 0 50px;
+  }
+
+  @media ($desktop) {
+    margin: 0 calc((100% - 1150px) / 2 + 50px);
+  }
+}

@@ -1,11 +1,17 @@
 .production {
   padding: 23px 0 30px;
   border: 1px solid $border-color;
+  position: relative;
 
   @media ($tablet) {
     display: flex;
     flex-direction: column;
     padding: 0;
+  }
+
+  @media ($desktop) {
+    min-height: 457px;
+    padding: 38px 20px 0 718px;
   }
 }
 
@@ -18,9 +24,13 @@
   @media ($tablet) {
     @include bg-icon("icon-video.svg", 0px, 5px);
     @include text(20px, 24px, 700);
-    order: 2;
     margin: 0 42px 34px;
     padding: 10px 0 0 66px;
+  }
+
+  @media ($desktop) {
+    margin: 0 70px 34px 42px;
+    padding: 60px 0 0 0;
   }
 }
 
@@ -28,12 +38,22 @@
   margin: 0 auto 25px;
 
   @media ($tablet) {
-    order: 1;
+    order: -1;
     margin: 0 auto 27px;
+  }
+
+  @media ($desktop) {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
 .production__img {
+  //
+}
+
+.production__container {
   //
 }
 
@@ -44,8 +64,11 @@
 
   @media ($tablet) {
     @include text(15px, 30px);
-    order: 2;
     margin: 0 42px 36px;
+  }
+
+  @media ($desktop) {
+    margin: 0 42px 45px;
   }
 }
 
@@ -53,7 +76,6 @@
   margin: 0 32px;
 
   @media ($tablet) {
-    order: 2;
     margin: 0 38px 44px 42px;
   }
 }

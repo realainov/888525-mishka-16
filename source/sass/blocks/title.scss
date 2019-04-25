@@ -6,4 +6,8 @@
   @media ($tablet) {
     @include text(43px, 50px, 700);
   }
+
+  @media ($desktop) {
+    @include text(53px, 57px, 700);
+  }
 }

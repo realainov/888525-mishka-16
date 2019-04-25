@@ -1,0 +1,14 @@
+.title-wrapper {
+  background-color: $footer-color;
+
+  @media ($tablet) {
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    background-size: 100%;
+  }
+
+  @media ($desktop) {
+    background-size: 1050px;
+  }
+}
