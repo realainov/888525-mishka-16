@@ -9,8 +9,8 @@
 <body>
   <header class="site-header">
     <nav class="site-header__site-navigation site-navigation site-navigation--image-color">
-      <button class="site-navigation__menu-toggle" type="button" title="Открыть меню"></button>
-      <div class="center-wrapper">
+      <div class="center-wrapper site-navigation__center-wrapper">
+        <button class="site-navigation__menu-toggle" type="button" title="Открыть меню"></button>
         <ul class="site-navigation__list">
           <li class="site-navigation__item site-navigation__logo">
             <a class="site-navigation__logo-link">
@@ -58,7 +58,7 @@
     <h1 class="visually-hidden">Главная страница / Интернет-магазин «MISHKA»</h1>
     <section class="catalog site-main__catalog">
       <h2 class="visually-hidden">Разделы каталога</h2>
-      <div class="center-wrapper">
+      <div class="center-wrapper catalog__center-wrapper">
         <b class="title catalog__title">Милые штуки ручной работы для дома</b>
         <ul class="catalog__list">
           <li class="catalog__item catalog__item--interior">
@@ -71,11 +71,11 @@
       </div>
     </section>
     <section class="ware site-main__ware">
-      <div class="center-wrapper">
-        <div class="ware__container">
+      <div class="center-wrapper ware__center-wrapper">
+        <div class="ware__wrapper">
           <h2 class="title ware__title">Вязаные корзинки</h2>
           <span class="ware__best-article">Товар недели</span>
-          <div class="ware__inner-container">
+          <div class="ware__content">
             <p class="ware__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
             <table class="ware__description-table">
               <tr class="ware__description-row">
@@ -91,66 +91,68 @@
                 <td class="ware__description-col">15 см</td>
               </tr>
             </table>
-            <div class="ware__img-container">
-              <picture class="ware__img">
-                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-                <img src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок">
-              </picture>
-            </div>
+            <picture class="ware__image">
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+              <img src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок">
+            </picture>
             <span class="ware__price">Цена: 990 руб.</span>
             <a class="button ware__order-button" href="#">Заказать</a>
           </div>
         </div>
       </div>
     </section>
-    <div class="center-wrapper">
-      <section class="briefly site-main__briefly">
-        <h2 class="title briefly__title">Коротко о нас:</h2>
-        <ul class="briefly__list">
-          <li class="briefly__item briefly___item--flower">Экологически чистые&nbsp;материалы</li>
-          <li class="briefly__item briefly___item--money">Скандинавский стиль по&nbsp;российской цене</li>
-          <li class="briefly__item briefly___item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
-          <li class="briefly__item briefly___item--ball">Связано вручную с любовью и умилением</li>
-          <li class="briefly__item briefly___item--rocket">Поддержка отечественного производителя</li>
-          <li class="briefly__item briefly___item--gift">Поставляется в подарочной упаковке</li>
-        </ul>
-      </section>
-    </div>
-    <section class="response site-main__response">
-      <div class="response__container">
-        <h2 class="title response__title">Отзывы</h2>
-        <ul class="response__comment-list">
-          <li class="response__comment-item">
-            <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="response__comment-author">Анастасия Красильникова</cite>
-            <cite class="response__comment-tag">@misssssiskras</cite>
-          </li>
-          <li class="response__comment-item">
-            <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="response__comment-author">Анастасия Красильникова</cite>
-            <cite class="response__comment-tag">@misssssiskras</cite>
-          </li>
-          <li class="response__comment-item">
-            <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-            <cite class="response__comment-author">Анастасия Красильникова</cite>
-            <cite class="response__comment-tag">@misssssiskras</cite>
-          </li>
-        </ul>
-        <ul class="response__control-list">
-          <li class="response__control-item">
-            <button class="response__control-button response__control-button--prev" type="button" title="Предыдущий отзыв"></button>
-          </li>
-          <li class="response__control-item">
-            <button class="response__control-button response__control-button--next" type="button" title="Следующий отзыв"></button>
-          </li>
-        </ul>
-        <a class="button response__write-button" href="#">Написать</a>
+    <section class="briefly site-main__briefly">
+      <div class="center-wrapper briefly__center-wrapper">
+        <div class="briefly__wrapper">
+          <h2 class="title briefly__title">Коротко о нас:</h2>
+          <ul class="briefly__list">
+            <li class="briefly__item briefly___item--flower">Экологически чистые&nbsp;материалы</li>
+            <li class="briefly__item briefly___item--money">Скандинавский стиль по&nbsp;российской цене</li>
+            <li class="briefly__item briefly___item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
+            <li class="briefly__item briefly___item--ball">Связано вручную с любовью и умилением</li>
+            <li class="briefly__item briefly___item--rocket">Поддержка отечественного производителя</li>
+            <li class="briefly__item briefly___item--gift">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
       </div>
     </section>
-    <div class="center-wrapper">
-      <section class="contacts site-main__contacts">
-        <div class="contacts__container">
+    <section class="response site-main__response">
+      <div class="center-wrapper response__center-wrapper">
+        <div class="response__wrapper">
+          <h2 class="title response__title">Отзывы</h2>
+          <ul class="response__comment-list">
+            <li class="response__comment-item">
+              <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="response__comment-author">Анастасия Красильникова</cite>
+              <cite class="response__comment-tag">@misssssiskras</cite>
+            </li>
+            <li class="response__comment-item">
+              <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="response__comment-author">Анастасия Красильникова</cite>
+              <cite class="response__comment-tag">@misssssiskras</cite>
+            </li>
+            <li class="response__comment-item">
+              <blockquote class="response__comment-quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+              <cite class="response__comment-author">Анастасия Красильникова</cite>
+              <cite class="response__comment-tag">@misssssiskras</cite>
+            </li>
+          </ul>
+          <ul class="response__control-list">
+            <li class="response__control-item">
+              <button class="response__control-button response__control-button--prev" type="button" title="Предыдущий отзыв"></button>
+            </li>
+            <li class="response__control-item">
+              <button class="response__control-button response__control-button--next" type="button" title="Следующий отзыв"></button>
+            </li>
+          </ul>
+          <a class="button response__write-button" href="#">Написать</a>
+        </div>
+      </div>
+    </section>
+    <section class="contacts site-main__contacts">
+      <div class="center-wrapper contacts__center-wrapper">
+        <div class="contacts__wrapper">
           <h2 class="title contacts__title">Контакты</h2>
           <table class="contacts__description-table">
             <tbody class="contacts__description-tbody">
@@ -170,19 +172,19 @@
           </table>
         </div>
         <div class="contacts__map">
-          <picture class="contacts__img">
+          <picture class="contacts__image">
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
             <img src="img/map-mobile@1x.jpg" alt="Наше расположение">
           </picture>
         </div>
         <a class="button contacts__write-us-button" href="#">Написать нам</a>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
-    <div class="center-wrapper">
-      <div class="site-footer__container">
+    <div class="center-wrapper site-footer__center-wrapper">
+      <div class="site-footer__wrapper">
         <a class="site-footer__logo">
           <img class="site-footer__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Логотип компании «MISHKA»">
         </a>

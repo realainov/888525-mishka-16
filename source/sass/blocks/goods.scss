@@ -1,33 +1,38 @@
 .goods {
-  //
+  background-color: white;
 }
 
 .goods__title-wrapper {
-  @media ($tablet) {
-    margin: 0 0 67px;
-  }
-
-  @media ($desktop) {
-    margin: 0 0 114px;
-  }
+  //
 }
 
 .goods__title {
   @include text(27px, 30px, 700);
-  margin: 0 0 30px;
   padding: 70px 0 76px;
   text-align: center;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
-    margin: 0 50px + 100px;
     padding: 54px 0 92px;
   }
 
   @media ($desktop) {
     @include text(53px, 57px, 700);
-    margin: 0 calc((100% - 1150px) / 2 + 50px + 150px);
+    width: 1050px;
+    margin: 0 auto;
     padding: 54px 0 115px;
+  }
+}
+
+.goods__center-wrapper {
+  padding: 30px 30px 0;
+
+  @media ($tablet) {
+    padding: 67px 50px 0;
+  }
+
+  @media ($desktop) {
+    padding: 114px 50px 0;
   }
 }
 
@@ -45,14 +50,14 @@
 }
 
 .goods__item {
-  margin: 0 29px 30px;
-  padding-bottom: 26px;
-  border: 1px solid $border-color;
+  margin: 0 0 30px;
+  padding: 0 0 28px;
+  outline: 1px solid $border-color;
   position: relative;
 
   @media ($tablet) {
     display: flex;
-    margin: 0 0 52px;
+    margin: 0 0 54px;
     padding: 0;
   }
 
@@ -63,11 +68,11 @@
   }
 }
 
-.goods__img-link {
+.goods__image-link {
   //
 }
 
-.goods__img {
+.goods__image {
   //
 }
 
@@ -94,10 +99,6 @@
 
   @media ($tablet) {
     @include text(20px, 24px, 700);
-    margin: 0 0 8px;
-  }
-
-  @media ($desktop) {
     margin: 0 0 6px;
   }
 }
@@ -141,7 +142,7 @@
   }
 }
 
-.goods__basket {
+.goods__cart {
   position: absolute;
   right: 25px;
   opacity: 0.2;

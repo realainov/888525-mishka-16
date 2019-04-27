@@ -2,6 +2,24 @@
   //
 }
 
+.briefly__center-wrapper {
+  padding: 28px 23px 0;
+
+  @media ($tablet) {
+    padding: 48px 50px 55px;
+  }
+
+  @media ($desktop) {
+    padding: 60px 50px 0;
+  }
+}
+
+.briefly__wrapper {
+  @media ($desktop) {
+    padding: 0 170px;
+  }
+}
+
 .briefly__title {
   margin: 0 0 5px;
 

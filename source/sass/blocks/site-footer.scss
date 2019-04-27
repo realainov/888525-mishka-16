@@ -2,21 +2,27 @@
   background-color: $footer-color;
 }
 
-.site-footer__container {
+.site-footer__center-wrapper {
+  padding: 28px 30px;
+
+  @media ($tablet) {
+    padding: 50px;
+  }
+
+  @media ($desktop) {
+    padding: 50px;
+  }
+}
+
+.site-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 28px 30px;
 
   @media ($tablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 50px 0;
-  }
-
-  @media ($desktop) {
-    padding: 50px 0;
   }
 }
 
@@ -32,16 +38,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
   padding: 0 60px 20px;
   border-bottom: 1px solid $border-color;
+  position: relative;
+  left: -3px;
+  top: -4px;
   list-style: none;
 
   @media ($tablet) {
     margin: 0;
     padding: 0;
-    position: relative;
-    left: 35px;
+    left: 38px;
+    top: 6px;
   }
 }
 

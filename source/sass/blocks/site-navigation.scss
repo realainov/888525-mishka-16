@@ -18,6 +18,12 @@
   }
 }
 
+.site-navigation__center-wrapper {
+  @media ($tablet) {
+    padding: 0 50px;
+  }
+}
+
 .site-navigation--image-color {
   &::after {
     background-color: $image-color;
@@ -117,6 +123,10 @@
     width: 50%;
   }
 
+  @media (min-width: 1000px) {
+    width: 55%;
+  }
+
   @media ($desktop) {
     width: auto;
   }
@@ -209,10 +219,10 @@
 
   svg {
     margin-top: -8px;
-    left: -46px;
+    left: -51px;
 
     @media ($desktop) {
-      left: -52px;
+      left: -53px;
     }
   }
 }

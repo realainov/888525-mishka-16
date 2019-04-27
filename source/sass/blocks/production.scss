@@ -1,6 +1,24 @@
 .production {
+  //
+}
+
+.production__center-wrapper {
+  padding: 0 30px 61px;
+
+  @media ($tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 64px;
+  }
+
+  @media ($desktop) {
+    padding: 0 50px 104px;
+  }
+}
+
+.production__wrapper {
+  outline: 1px solid $border-color;
   padding: 23px 0 30px;
-  border: 1px solid $border-color;
   position: relative;
 
   @media ($tablet) {
@@ -11,18 +29,18 @@
 
   @media ($desktop) {
     min-height: 457px;
-    padding: 38px 20px 0 718px;
+    padding: 36px 20px 15px 718px;
   }
 }
 
 .production__title {
-  @include bg-icon("icon-video.svg", 35px, 5px);
+  @include bg-icon("icon-video.svg", 33px, 7px);
   @include text(17px, 24px, 700);
-  margin: 0 0 27px 0;
+  margin: 0 0 25px 0;
   padding: 0 0 0 90px;
 
   @media ($tablet) {
-    @include bg-icon("icon-video.svg", 0px, 5px);
+    @include bg-icon("icon-video.svg", 0, 5px);
     @include text(20px, 24px, 700);
     margin: 0 42px 34px;
     padding: 10px 0 0 66px;
@@ -35,11 +53,10 @@
 }
 
 .production__video {
-  margin: 0 auto 25px;
+  margin: 0 auto 27px;
 
   @media ($tablet) {
     order: -1;
-    margin: 0 auto 27px;
   }
 
   @media ($desktop) {
@@ -49,11 +66,7 @@
   }
 }
 
-.production__img {
-  //
-}
-
-.production__container {
+.production__image {
   //
 }
 
@@ -76,6 +89,6 @@
   margin: 0 32px;
 
   @media ($tablet) {
-    margin: 0 38px 44px 42px;
+    margin: 0 38px 42px 42px;
   }
 }

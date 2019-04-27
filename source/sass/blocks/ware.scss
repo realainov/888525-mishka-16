@@ -1,30 +1,35 @@
 .ware {
-  position: relative;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
   background-size: 100%;
+}
+
+.ware__center-wrapper {
+  padding: 28px 30px 40px 30px;
+
+  @media ($tablet) {
+    padding: 35px 50px 70px;
+  }
 
   @media ($desktop) {
-    width: 1050px;
-    padding: 52px 0 0;
+    padding: 70px 50px 95px;
   }
 }
 
-.ware__container {
+.ware__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 28px 30px 40px 30px;
 
   @media ($tablet) {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 0 70px;
+    position: relative;
   }
 
   @media ($desktop) {
-    padding: 0 350px 95px 45px;
+    padding: 52px 350px 0 45px;
   }
 }
 
@@ -43,7 +48,7 @@
 .ware__best-article {
   @include text(17px, 20px, 700);
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 25px;
   color: $seafoam-blue;
   text-transform: uppercase;
 
@@ -60,7 +65,7 @@
   }
 }
 
-.ware__inner-container {
+.ware__content {
   @media ($tablet) {
     margin: 0 380px 0 0;
   }
@@ -72,7 +77,7 @@
 
 .ware__text {
   @include text(15px, 24px);
-  margin-bottom: 17px;
+  margin: 0 0 17px;
   color: $text-color;
 
   @media ($tablet) {
@@ -115,31 +120,20 @@
   }
 }
 
-.ware__img-container {
-  width: 260px;
-  height: 315px;
+.ware__image {
   margin: 0 auto 22px;
-  overflow: hidden;
 
   @media ($tablet) {
-    width: 333px;
-    height: 404px;
+    margin: 0;
     position: absolute;
-    top: 108px;
-    right: 50px;
+    bottom: 0;
+    right: 0;
   }
 
   @media ($desktop) {
-    width: 525px;
-    height: 636px;
     top: 0;
-    right: 0;
     z-index: -1;
   }
-}
-
-.ware__img {
-  //
 }
 
 .ware__price {

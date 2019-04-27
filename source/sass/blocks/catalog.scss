@@ -36,23 +36,25 @@
   }
 }
 
+.catalog__center-wrapper {
+  @media ($tablet) {
+    padding: 0 50px;
+  }
+}
+
 .catalog__title {
   @include text(27px, 30px, 700);
   display: block;
-  min-height: 282px;
-  margin: 0 30px;
-  padding: 73px 0;
+  padding: 73px 30px 120px;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
-    min-height: 474px;
-    margin: 0;
-    padding: 112px 0;
+    padding: 112px 50px 373px;
   }
 
   @media ($desktop) {
     @include text(53px, 57px, 700);
-    margin: 0 150px;
+    padding: 112px 150px 359px;
   }
 }
 

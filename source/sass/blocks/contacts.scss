@@ -1,25 +1,31 @@
 .contacts {
+  //
+}
+
+.contacts__center-wrapper {
+  padding: 37px 30px;
   position: relative;
 
   @media ($tablet) {
+    padding: 62px 50px 55px;
     text-align: center;
   }
 
   @media ($desktop) {
     display: flex;
-    padding: 0 0 0 122px;
+    padding: 77px 50px 105px 220px;
   }
 }
 
-.contacts__container {
+.contacts__wrapper {
   @media ($desktop) {
-    padding-top: 70px;
+    padding: 74px 0 54px;
   }
 }
 
 .contacts__title {
   @include text(18px, 30px, 700);
-  margin: 0 28px 23px;
+  margin: 0 0 23px;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
@@ -29,14 +35,14 @@
 
   @media ($desktop) {
     @include text(53px, 57px, 700);
-    margin: 0 48px 48px;
+    margin: 0 0 46px;
     text-align: left;
   }
 }
 
 .contacts__description-table {
   @include text(15px, 30px);
-  margin: 0 28px 10px;
+  margin: 0 0 10px;
   color: $text-color;
   border-collapse: collapse;
 
@@ -47,7 +53,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 20px 59px 52px;
+    margin: 0;
   }
 }
 
@@ -67,20 +73,21 @@
 
 .contacts__description-row:first-child {
   @media ($tablet) {
-    margin-right: 46px;
+    margin: 0 46px 0 0;
   }
 }
 
 .contacts__description-col {
-  padding-bottom: 30px;
+  display: inline-block;
+  margin: 0 0 30px;
   vertical-align: top;
 
   @media ($tablet) {
-    padding-bottom: 0;
+    margin: 0;
   }
 
   @media ($desktop) {
-    padding-bottom: 30px;
+    margin: 0 0 30px;
   }
 
   &:first-child {
@@ -103,32 +110,38 @@
 }
 
 .contacts__map {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 36px;
+  width: 322px;
+  margin: 0 auto 36px;
+  position: relative;
+  left: -30px;
 
   @media ($tablet) {
-    margin-bottom: 53px;
+    width: 768px;
+    margin: 0 auto 53px;
+    left: -50px;
   }
 
   @media ($desktop) {
+    width: 525px;
     margin: 0 0 0 auto;
+    position: static;
   }
 }
 
-.contacts__write-us-button {
-  margin: 0 30px;
+.contacts__image {
+  margin: 0;
+}
 
+.contacts__write-us-button {
   @media ($tablet) {
     display: inline-block;
-    margin: 0;
     padding: 15px 43px;
     vertical-align: middle;
   }
 
   @media ($desktop) {
     position: absolute;
-    bottom: 0;
-    left: 174px;
+    bottom: 104px;
+    left: 226px;
   }
 }

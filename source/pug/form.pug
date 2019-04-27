@@ -10,7 +10,7 @@ html(lang="ru")
     header.site-header
       nav.site-header__site-navigation.site-navigation.site-navigation--footer-color
         button.site-navigation__menu-toggle(type="button" title="Открыть меню")
-        div.center-wrapper
+        div.center-wrapper.site-navigation__center-wrapper
           ul.site-navigation__list
             li.site-navigation__item.site-navigation__logo
               a.site-navigation__logo-link(href="index.html")
@@ -40,76 +40,72 @@ html(lang="ru")
       section.order.site-main__order
         div.title-wrapper.order__title-wrapper
           h2.title.order__title Вязание на заказ
-        p.order__text Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        div.center-wrapper.order__center-wrapper
+          p.order__text Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         form.order-form.order__order-form(action="https://echo.htmlacademy.ru" method="get")
           div.order-form__fieldset.order-form__type-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__type-container
-                legend.order-form__legend.order-form__type-legend Тип
-                ul.order-form__list.order-form__type-list
-                  li.order-form__item.order-form__type-item
-                    input.order-form__radio.order-form__type-radio.visually-hidden(name="type" id="accessory-input" type="radio" value="accessory" checked)
-                    label.order-form__label.order-form__type-label(for="accessory-input") Аксессуар для интерьера
-                  li.order-form__item.order-form__type-item
-                    input.order-form__radio.order-form__type-radio.visually-hidden(name="type" id="toy-input" type="radio" value="toy")
-                    label.order-form__label.order-form__type-label(for="toy-input") Детская игрушка
+            div.center-wrapper.order-form__center-wrapper.order-form__type-wrapper
+              legend.order-form__legend.order-form__type-legend Тип
+              ul.order-form__list.order-form__type-list
+                li.order-form__item.order-form__type-item
+                  input.order-form__radio.order-form__type-radio.visually-hidden(name="type" id="accessory-input" type="radio" value="accessory" checked)
+                  label.order-form__label.order-form__type-label(for="accessory-input") Аксессуар для интерьера
+                li.order-form__item.order-form__type-item
+                  input.order-form__radio.order-form__type-radio.visually-hidden(name="type" id="toy-input" type="radio" value="toy")
+                  label.order-form__label.order-form__type-label(for="toy-input") Детская игрушка
           div.order-form__fieldset.order-form__color-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__color-container
-                legend.order-form__legend.order-form__color-legend Цвет
-                ul.order-form__list.order-form__color-list
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="white" id="white-input" type="checkbox")
-                    label.order-form__label.order-form__color-label(for="white-input") Белый
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="grey" id="grey-input" type="checkbox")
-                    label.order-form__label.order-form__color-label(for="grey-input") Серый
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="tiffany" id="tiffany-input" type="checkbox")
-                    label.order-form__label.order-form__color-label(for="tiffany-input") «Тиффани»
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="black" id="black-input" type="checkbox")
-                    label.order-form__label.order-form__color-label(for="black-input") Черный
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="pink" id="pink-input" type="checkbox" checked)
-                    label.order-form__label.order-form__color-label(for="pink-input") Розовый
-                  li.order-form__item.order-form__color-item
-                    input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="orange" id="orange-input" type="checkbox" disabled)
-                    label.order-form__label.order-form__color-label(for="orange-input") Оранжевый
+            div.center-wrapper.order-form__center-wrapper.order-form__color-wrapper
+              legend.order-form__legend.order-form__color-legend Цвет
+              ul.order-form__list.order-form__color-list
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="white" id="white-input" type="checkbox")
+                  label.order-form__label.order-form__color-label(for="white-input") Белый
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="grey" id="grey-input" type="checkbox")
+                  label.order-form__label.order-form__color-label(for="grey-input") Серый
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="tiffany" id="tiffany-input" type="checkbox")
+                  label.order-form__label.order-form__color-label(for="tiffany-input") «Тиффани»
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="black" id="black-input" type="checkbox")
+                  label.order-form__label.order-form__color-label(for="black-input") Черный
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="pink" id="pink-input" type="checkbox" checked)
+                  label.order-form__label.order-form__color-label(for="pink-input") Розовый
+                li.order-form__item.order-form__color-item
+                  input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="orange" id="orange-input" type="checkbox" disabled)
+                  label.order-form__label.order-form__color-label(for="orange-input") Оранжевый
           div.order-form__fieldset.order-form__fullname-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__fullname-container
-                legend.order-form__legend.order-form__fullname-legend ФИО
-                ul.order-form__list.order-form__fullname-list
-                  li.order-form__item.order-form__fullname-item
-                    label.order-form__label.order-form__fullname-label(for="first-name-field") Имя:
-                    input.order-form__field.order-form__fullname-field(name="first-name" id="first-name-field" type="text" placeholder="Введите ваше имя*" required)
-                  li.order-form__item.order-form__fullname-item
-                    label.order-form__label.order-form__fullname-label(for="second-name-field") Фамилия:
-                    input.order-form__field.order-form__fullname-field(name="second-name" id="second-name-field" type="text" placeholder="Укажите фамилию*" required)
-                  li.order-form__item.order-form__fullname-item
-                    label.order-form__label.order-form__fullname-label(for="middle-name-field") Отчество:
-                    input.order-form__field.order-form__fullname-field(name="middle-name" id="middle-name-field" type="text" placeholder="Отчество, если желаете")
+            div.center-wrapper.order-form__center-wrapper.order-form__fullname-wrapper
+              legend.order-form__legend.order-form__fullname-legend ФИО
+              ul.order-form__list.order-form__fullname-list
+                li.order-form__item.order-form__fullname-item
+                  label.order-form__label.order-form__fullname-label(for="first-name-field") Имя:
+                  input.order-form__field.order-form__fullname-field(name="first-name" id="first-name-field" type="text" placeholder="Введите ваше имя*" required)
+                li.order-form__item.order-form__fullname-item
+                  label.order-form__label.order-form__fullname-label(for="second-name-field") Фамилия:
+                  input.order-form__field.order-form__fullname-field(name="second-name" id="second-name-field" type="text" placeholder="Укажите фамилию*" required)
+                li.order-form__item.order-form__fullname-item
+                  label.order-form__label.order-form__fullname-label(for="middle-name-field") Отчество:
+                  input.order-form__field.order-form__fullname-field(name="middle-name" id="middle-name-field" type="text" placeholder="Отчество, если желаете")
           div.order-form__fieldset.order-form__phone-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__phone-container
-                legend.order-form__legend.order-form__phone-legend Тел
-                input.order-form__field.order-form__phone-field(name="phone" id="phone-field" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required)
-                label.order-form__label.order-form__phone-label(for="phone-field")
-                  include ../img/icon-phone.svg
+            div.center-wrapper.order-form__center-wrapper.order-form__phone-wrapper
+              legend.order-form__legend.order-form__phone-legend Тел
+              input.order-form__field.order-form__phone-field(name="phone" id="phone-field" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required)
+              label.order-form__label.order-form__phone-label(for="phone-field")
+                include ../img/icon-phone.svg
           div.order-form__fieldset.order-form__email-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__email-container
-                legend.order-form__legend.order-form__email-legend E-mail
-                input.order-form__field.order-form__email-field(name="email" id="email-field" type="email" placeholder="Ваш Email*" required)
-                label.order-form__label.order-form__email-label(for="email-field")
-                  include ../img/icon-mail.svg
+            div.center-wrapper.order-form__center-wrapper.order-form__email-wrapper
+              legend.order-form__legend.order-form__email-legend E-mail
+              input.order-form__field.order-form__email-field(name="email" id="email-field" type="email" placeholder="Ваш Email*" required)
+              label.order-form__label.order-form__email-label(for="email-field")
+                include ../img/icon-mail.svg
           div.order-form__fieldset.order-form__add-fieldset
-            div.center-wrapper
-              div.order-form__container.order-form__add-container
-                legend.order-form__legend.order-form__add-legend Доп
-                textarea.order-form__textarea.order-form__add-textarea(name="addition" id="addition-field" placeholder="Опишите все ваши пожелания к заказу")
-          span.order-form__required *Поля обязательны для заполнения
-          button.button.order-form__submit-button(type="submit") Отправить заказ
+            div.center-wrapper.order-form__center-wrapper.order-form__add-wrapper
+              legend.order-form__legend.order-form__add-legend Доп
+              textarea.order-form__textarea.order-form__add-textarea(name="addition" id="addition-field" placeholder="Опишите все ваши пожелания к заказу")
+          div.center-wrapper.order-form__center-wrapper
+            span.order-form__required *Поля обязательны для заполнения
+            button.button.order-form__submit-button(type="submit") Отправить заказ
     include blocks/site-footer
     script(src="js/app.js")

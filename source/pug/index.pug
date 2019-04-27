@@ -9,8 +9,8 @@ html(lang="ru")
   body
     header.site-header
       nav.site-header__site-navigation.site-navigation.site-navigation--image-color
-        button.site-navigation__menu-toggle(type="button" title="Открыть меню")
-        div.center-wrapper
+        div.center-wrapper.site-navigation__center-wrapper
+          button.site-navigation__menu-toggle(type="button" title="Открыть меню")
           ul.site-navigation__list
             li.site-navigation__item.site-navigation__logo
               a.site-navigation__logo-link
@@ -39,7 +39,7 @@ html(lang="ru")
       h1.visually-hidden Главная страница / Интернет-магазин «MISHKA»
       section.catalog.site-main__catalog
         h2.visually-hidden Разделы каталога
-        div.center-wrapper
+        div.center-wrapper.catalog__center-wrapper
           b.title.catalog__title Милые штуки ручной работы для дома
           ul.catalog__list
             li.catalog__item.catalog__item--interior
@@ -47,11 +47,11 @@ html(lang="ru")
             li.catalog__item.catalog__item--toy
               a.catalog__link(href="#") Детские игрушки
       section.ware.site-main__ware
-        div.center-wrapper
-          div.ware__container
+        div.center-wrapper.ware__center-wrapper
+          div.ware__wrapper
             h2.title.ware__title Вязаные корзинки
             span.ware__best-article Товар недели
-            div.ware__inner-container
+            div.ware__content
               p.ware__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
               table.ware__description-table
                 tr.ware__description-row
@@ -63,48 +63,49 @@ html(lang="ru")
                 tr.ware__description-row
                   td.ware__description-col Высота:
                   td.ware__description-col 15 см
-              div.ware__img-container
-                picture.ware__img
-                  source(media=desktop srcset="img/triple-set-desktop@1x.jpg")
-                  source(media=tablet srcset="img/triple-set-tablet@1x.jpg")
-                  img(src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок")
+              picture.ware__image
+                source(media=desktop srcset="img/triple-set-desktop@1x.jpg")
+                source(media=tablet srcset="img/triple-set-tablet@1x.jpg")
+                img(src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок")
               span.ware__price Цена: 990 руб.
               a.button.ware__order-button(href="#") Заказать
-      div.center-wrapper
-        section.briefly.site-main__briefly
-          h2.title.briefly__title Коротко о нас:
-          ul.briefly__list
-            li.briefly__item.briefly___item--flower Экологически чистые&nbsp;материалы
-            li.briefly__item.briefly___item--money Скандинавский стиль по&nbsp;российской цене
-            li.briefly__item.briefly___item--heart Увеличивает лайки на&nbsp;фотографиях
-            li.briefly__item.briefly___item--ball Связано вручную с любовью и умилением
-            li.briefly__item.briefly___item--rocket Поддержка отечественного производителя
-            li.briefly__item.briefly___item--gift Поставляется в подарочной упаковке
+      section.briefly.site-main__briefly
+        div.center-wrapper.briefly__center-wrapper
+          div.briefly__wrapper
+            h2.title.briefly__title Коротко о нас:
+            ul.briefly__list
+              li.briefly__item.briefly___item--flower Экологически чистые&nbsp;материалы
+              li.briefly__item.briefly___item--money Скандинавский стиль по&nbsp;российской цене
+              li.briefly__item.briefly___item--heart Увеличивает лайки на&nbsp;фотографиях
+              li.briefly__item.briefly___item--ball Связано вручную с любовью и умилением
+              li.briefly__item.briefly___item--rocket Поддержка отечественного производителя
+              li.briefly__item.briefly___item--gift Поставляется в подарочной упаковке
       section.response.site-main__response
-        div.response__container
-          h2.title.response__title Отзывы
-          ul.response__comment-list
-            li.response__comment-item
-              blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              cite.response__comment-author Анастасия Красильникова
-              cite.response__comment-tag @misssssiskras
-            li.response__comment-item
-              blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              cite.response__comment-author Анастасия Красильникова
-              cite.response__comment-tag @misssssiskras
-            li.response__comment-item
-              blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              cite.response__comment-author Анастасия Красильникова
-              cite.response__comment-tag @misssssiskras
-          ul.response__control-list
-            li.response__control-item
-              button.response__control-button.response__control-button--prev(type="button" title="Предыдущий отзыв")
-            li.response__control-item
-              button.response__control-button.response__control-button--next(type="button" title="Следующий отзыв")
-          a.button.response__write-button(href="#") Написать
-      div.center-wrapper
-        section.contacts.site-main__contacts
-          div.contacts__container
+        div.center-wrapper.response__center-wrapper
+          div.response__wrapper
+            h2.title.response__title Отзывы
+            ul.response__comment-list
+              li.response__comment-item
+                blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                cite.response__comment-author Анастасия Красильникова
+                cite.response__comment-tag @misssssiskras
+              li.response__comment-item
+                blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                cite.response__comment-author Анастасия Красильникова
+                cite.response__comment-tag @misssssiskras
+              li.response__comment-item
+                blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                cite.response__comment-author Анастасия Красильникова
+                cite.response__comment-tag @misssssiskras
+            ul.response__control-list
+              li.response__control-item
+                button.response__control-button.response__control-button--prev(type="button" title="Предыдущий отзыв")
+              li.response__control-item
+                button.response__control-button.response__control-button--next(type="button" title="Следующий отзыв")
+            a.button.response__write-button(href="#") Написать
+      section.contacts.site-main__contacts
+        div.center-wrapper.contacts__center-wrapper
+          div.contacts__wrapper
             h2.title.contacts__title Контакты
             table.contacts__description-table
               tbody.contacts__description-tbody
@@ -117,7 +118,7 @@ html(lang="ru")
                   td.contacts__description-col
                     address.contacts__address г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101
           div.contacts__map
-            picture.contacts__img
+            picture.contacts__image
               source(media=desktop srcset="img/map-desktop@1x.jpg")
               source(media=tablet srcset="img/map-tablet@1x.jpg")
               img(src="img/map-mobile@1x.jpg" alt="Наше расположение")
