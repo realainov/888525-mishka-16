@@ -1,13 +1,39 @@
 .goods {
+  background-color: white;
+}
 
+.goods__title-wrapper {
+  //
 }
 
 .goods__title {
   @include text(27px, 30px, 700);
-  margin-bottom: 30px;
   padding: 70px 0 76px;
-  background-color: $footer-color;
   text-align: center;
+
+  @media ($tablet) {
+    @include text(43px, 50px, 700);
+    padding: 54px 0 92px;
+  }
+
+  @media ($desktop) {
+    @include text(53px, 57px, 700);
+    width: 1050px;
+    margin: 0 auto;
+    padding: 54px 0 115px;
+  }
+}
+
+.goods__center-wrapper {
+  padding: 30px 30px 0;
+
+  @media ($tablet) {
+    padding: 67px 50px 0;
+  }
+
+  @media ($desktop) {
+    padding: 114px 50px 0;
+  }
 }
 
 .goods__list {
@@ -16,51 +42,113 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.goods__item {
-  margin: 0 30px 30px;
-  padding-bottom: 28px;
-  border: 1px solid $border-color;
-  position: relative;
-  svg {
-    position: absolute;
-    right: 27px;
-    opacity: 0.2;
+  @media ($desktop) {
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
-.goods__img-link {
+.goods__item {
+  margin: 0 0 30px;
+  padding: 0 0 28px;
+  outline: 1px solid $border-color;
+  position: relative;
 
+  @media ($tablet) {
+    display: flex;
+    margin: 0 0 54px;
+    padding: 0;
+  }
+
+  @media ($desktop) {
+    flex-direction: column;
+    width: 318px;
+    margin: 0 0 55px;
+  }
 }
 
-.goods__img {
-  margin-bottom: 22px;
+.goods__image-link {
+  //
+}
+
+.goods__image {
+  //
+}
+
+.goods__item-container {
+  padding: 27px 28px 0;
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px 28px 29px;
+  }
+
+  @media ($desktop) {
+    height: 100%;
+  }
 }
 
 .goods__item-link {
   @include text(17px, 24px, 700);
-  margin: 0 25px 5px;
+  margin: 0 0 5px;
   display: block;
+
+  @media ($tablet) {
+    @include text(20px, 24px, 700);
+    margin: 0 0 6px;
+  }
 }
 
 .goods__description {
   @include text(13px, 30px);
   display: block;
-  margin: 0 25px 20px;
+  margin: 0 0 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid $border-color;
   color: $text-color;
   text-align: left;
+
+  @media ($tablet) {
+    @include text(15px, 30px);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 15px;
+  }
 }
 
 .goods__price {
   @include text(15px, 24px, 700);
-  margin: 0 25px;
   color: black;
   text-align: left;
+
+  @media ($tablet) {
+    @include text(17px, 24px, 700);
+    display: block;
+    margin: auto 0 0 4px;
+    border-top: 1px solid $border-color;
+    padding-top: 20px;
+  }
+
+  @media ($desktop) {
+    margin: auto 0 0;
+  }
 }
 
-.goods__basket {
+.goods__cart {
+  position: absolute;
+  right: 25px;
+  opacity: 0.2;
 
+  @media ($tablet) {
+    bottom: 25px;
+    right: 33px;
+  }
 }

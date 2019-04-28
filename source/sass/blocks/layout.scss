@@ -10,12 +10,20 @@ html {
 
 body {
   @include text(13px, 24px);
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   color: $text-color;
+
+  @media ($tablet) {
+    @include text(17px, 30px);
+  }
 }
 
 a {
   color: black;
   text-decoration: none;
+}
+
+picture img {
+  display: block;
 }

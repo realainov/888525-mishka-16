@@ -1,20 +1,44 @@
 .order {
+  background-color: white;
+}
 
+.order__title-wrapper {
+  //
 }
 
 .order__title {
   @include text(27px, 30px, 700);
-  margin-bottom: 23px;
   padding: 70px 0 76px;
-  background-color: $footer-color;
   text-align: center;
+
+  @media ($tablet) {
+    @include text(43px, 50px, 700);
+    padding: 54px 0 92px;
+  }
+
+  @media ($desktop) {
+    @include text(53px, 57px, 700);
+    width: 1050px;
+    margin: 0 auto;
+    padding: 54px 0 115px;
+  }
 }
 
 .order__text {
   @include text(13px, 24px);
-  margin: 0 30px 22px;
+  margin: 0;
+  padding: 23px 30px 0;
+
+  @media ($tablet) {
+    @include text(17px, 30px);
+    padding: 60px 51px 0;
+  }
+
+  @media ($desktop) {
+    padding: 108px 225px 0;
+  }
 }
 
 .order__order-form {
-  margin: 0 27px;
+  //
 }

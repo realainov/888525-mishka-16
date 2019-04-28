@@ -1,5 +1,5 @@
 @mixin layout($color: black) {
-  background-color: rgba($color, 0.1);
+  background-color: rgba($color, 0.1) !important;
   outline: 2px solid black;
 }
 
@@ -25,5 +25,5 @@
 @mixin bg-icon($name-icon, $horizontal: center, $vertical: center) {
   background-image: url("../img/#{$name-icon}");
   background-repeat: no-repeat;
-  background-position: $vertical $horizontal;
+  background-position: $horizontal $vertical;
 }
