@@ -29,34 +29,50 @@
 
   @media ($desktop) {
     min-height: 457px;
-    padding: 36px 20px 15px 718px;
+    padding: 41px 20px 15px 718px;
   }
 }
 
 .production__title {
-  @include bg-icon("icon-video.svg", 33px, 7px);
   @include text(17px, 24px, 700);
-  margin: 0 0 25px 0;
-  padding: 0 0 0 90px;
+  margin: 0 34px 25px;
+  padding: 0 0 0 56px;
+  position: relative;
 
   @media ($tablet) {
-    @include bg-icon("icon-video.svg", 0, 5px);
     @include text(20px, 24px, 700);
     margin: 0 42px 34px;
-    padding: 10px 0 0 66px;
+    padding: 0 0 0 66px;
   }
 
   @media ($desktop) {
     margin: 0 70px 34px 42px;
-    padding: 60px 0 0 0;
+    padding: 54px 0 0;
+  }
+
+  &::before {
+    @include icon("icon-video.svg", 32px, 32px);
+    position: absolute;
+    margin-top: -16px;
+    top: 50%;
+    left: 0;
+
+    @media ($desktop) {
+      margin: 0;
+      top: 0;
+      left: 2px;
+    }
   }
 }
 
 .production__video {
+  width: 260px;
   margin: 0 auto 27px;
 
   @media ($tablet) {
     order: -1;
+    width: 668px;
+    margin: 0 auto 37px;
   }
 
   @media ($desktop) {
@@ -72,23 +88,29 @@
 
 .production__text {
   @include text(13px, 24px);
-  margin: 0 40px 24px 36px;
+  margin: 0 40px 24px 34px;
   color: $text-color;
 
   @media ($tablet) {
     @include text(15px, 30px);
-    margin: 0 42px 36px;
+    margin: 0 40px 36px;
   }
 
   @media ($desktop) {
-    margin: 0 42px 45px;
+    margin: 0 42px 48px;
   }
 }
 
 .production__order-button {
-  margin: 0 32px;
+  margin: 0 33px;
 
   @media ($tablet) {
-    margin: 0 38px 42px 42px;
+    margin: 0 42px 44px;
+    padding: 14px 0;
+  }
+
+  @media ($desktop) {
+    margin: 0 39px 44px 43px;
+    padding: 14px 0;
   }
 }

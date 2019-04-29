@@ -3,7 +3,7 @@
 }
 
 .contacts__center-wrapper {
-  padding: 37px 30px;
+  padding: 34px 30px 39px;
   position: relative;
 
   @media ($tablet) {
@@ -19,17 +19,17 @@
 
 .contacts__wrapper {
   @media ($desktop) {
-    padding: 74px 0 54px;
+    padding: 71px 0 54px;
   }
 }
 
 .contacts__title {
   @include text(18px, 30px, 700);
-  margin: 0 0 23px;
+  margin: 0 0 26px;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
-    margin: 0 0 48px;
+    margin: 0 0 48px -5px;
     text-align: left;
   }
 
@@ -42,18 +42,18 @@
 
 .contacts__description-table {
   @include text(15px, 30px);
-  margin: 0 0 10px;
+  margin: 0 0 9px;
   color: $text-color;
   border-collapse: collapse;
 
   @media ($tablet) {
     @include text(17px, 30px);
-    margin: 0 0 59px;
+    margin: 0 0 57px;
     text-align: left;
   }
 
   @media ($desktop) {
-    margin: 0;
+    margin: 0 0 0 3px;
   }
 }
 
@@ -79,7 +79,7 @@
 
 .contacts__description-col {
   display: inline-block;
-  margin: 0 0 30px;
+  margin: 0 0 28px;
   vertical-align: top;
 
   @media ($tablet) {
@@ -91,12 +91,21 @@
   }
 
   &:first-child {
-    width: 78px;
+    width: 75px;
+
+    @media ($tablet) {
+      width: 72px;
+    }
+
+    @media ($desktop) {
+      width: 77px;
+    }
   }
 }
 
 .contacts__email {
-  padding-bottom: 5px;
+  margin: 0 3px 0 0;
+  padding: 0 0 5px;
   border-bottom: 1px solid $seafoam-blue;
 }
 
@@ -110,15 +119,16 @@
 }
 
 .contacts__map {
-  width: 322px;
-  margin: 0 auto 36px;
+  width: 320px;
+  margin: 0 0 38px;
   position: relative;
-  left: -30px;
+  left: calc((100% - 320px) / 2);
+  overflow: hidden;
 
   @media ($tablet) {
     width: 768px;
-    margin: 0 auto 53px;
-    left: -50px;
+    margin: 0 0 54px;
+    left: calc((100% - 768px) / 2);
   }
 
   @media ($desktop) {
@@ -141,7 +151,7 @@
 
   @media ($desktop) {
     position: absolute;
-    bottom: 104px;
+    bottom: 103px;
     left: 226px;
   }
 }

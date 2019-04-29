@@ -34,28 +34,28 @@
 }
 
 .ware__title {
-  margin-bottom: 2px;
+  margin: 0 0 4px;
 
   @media ($tablet) {
-    margin-bottom: 48px;
+    margin: 0 0 50px;
   }
 
   @media ($desktop) {
-    margin: 0 0 46px 55px;
+    margin: 0 0 47px 55px;
   }
 }
 
 .ware__best-article {
   @include text(17px, 20px, 700);
   display: block;
-  margin: 0 0 25px;
+  margin: 0 0 23px;
   color: $seafoam-blue;
   text-transform: uppercase;
 
   @media ($tablet) {
     @include text(17px, 17px, 700);
     width: 70px;
-    margin: 10px 30px 0 auto;
+    margin: 11px 28px 0 auto;
     text-align: center;
   }
 
@@ -86,7 +86,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 0 50px;
+    margin: 0 0 48px;
   }
 }
 
@@ -98,7 +98,7 @@
   color: $text-color;
 
   @media ($tablet) {
-    margin: 0 0 58px;
+    margin: 0 0 56px;
   }
 
   @media ($desktop) {
@@ -115,15 +115,18 @@
   padding: 10px 0;
 
   &:first-child {
-    width: 95px;
+    width: 96px;
     padding-right: 10px;
   }
 }
 
 .ware__image {
+  display: block;
+  width: 260px;
   margin: 0 auto 22px;
 
   @media ($tablet) {
+    width: 333px;
     margin: 0;
     position: absolute;
     bottom: 0;
@@ -131,6 +134,7 @@
   }
 
   @media ($desktop) {
+    width: 525px;
     top: 0;
     z-index: -1;
   }
@@ -147,11 +151,11 @@
     @include text(20px, 24px, 700);
     align-self: center;
     width: 100%;
-    margin: 0 0 33px;
+    margin: 0 0 34px;
   }
 
   @media ($desktop) {
-    margin: 0 0 33px;
+    margin: 0 0 35px;
   }
 }
 

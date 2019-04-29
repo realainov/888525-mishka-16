@@ -96,7 +96,7 @@
 .site-navigation__order {
   @media ($tablet) {
     @include text(15px, 24px, 700);
-    margin: 17px 0 0 37px;
+    margin: 18px 0 0 37px;
     padding: 0;
   }
 }
@@ -152,7 +152,7 @@
 .site-navigation__catalog {
   @media ($tablet) {
     order: 2;
-    margin: 17px 0 0 0;
+    margin: 18px 0 0 0;
   }
 
   @media ($desktop) {
@@ -219,7 +219,12 @@
 
   svg {
     margin-top: -8px;
-    left: -51px;
+    left: -46px;
+
+    @media ($tablet) {
+      margin-top: -10px;
+      left: -51px;
+    }
 
     @media ($desktop) {
       left: -53px;

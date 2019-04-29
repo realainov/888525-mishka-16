@@ -45,7 +45,7 @@
 .catalog__title {
   @include text(27px, 30px, 700);
   display: block;
-  padding: 73px 30px 120px;
+  padding: 71px 30px 122px;
 
   @media ($tablet) {
     @include text(43px, 50px, 700);
@@ -91,11 +91,11 @@
   @media ($tablet) {
     width: 50%;
     min-height: 119px;
-    padding: 26px 180px 42px 35px;
+    padding: 28px 180px 40px 35px;
   }
 
   @media ($desktop) {
-    padding: 26px 320px 33px 35px;
+    padding: 28px 320px 32px 35px;
   }
 
   &::after {

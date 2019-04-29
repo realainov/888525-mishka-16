@@ -3,14 +3,14 @@
 }
 
 .briefly__center-wrapper {
-  padding: 28px 23px 0;
+  padding: 29px 23px 0;
 
   @media ($tablet) {
-    padding: 48px 50px 55px;
+    padding: 47px 50px 55px;
   }
 
   @media ($desktop) {
-    padding: 60px 50px 0;
+    padding: 58px 50px 0;
   }
 }
 
@@ -21,10 +21,10 @@
 }
 
 .briefly__title {
-  margin: 0 0 5px;
+  margin: 0 0 2px 5px;
 
   @media ($tablet) {
-    margin: 0 0 18px;
+    margin: 0 0 18px -5px;
   }
 
   @media ($desktop) {
@@ -60,61 +60,81 @@
   @media ($tablet) {
     width: 320px;
     margin: 0 14px 29px 0;
-    padding: 83px 40px 0 7px;
+    padding: 84px 40px 0 7px;
   }
 
   @media ($desktop) {
-    margin: 0 30px 29px 0;
+    margin: 0 32px 27px 0;
   }
 }
 
 .briefly___item--ball {
-  @include bg-icon("icon-feature-ball.svg", 8px, 30px);
+  @include bg-icon("icon-feature-ball.svg", 10px, 33px);
 
   @media ($tablet) {
     order: 2;
     background-position: 10px 35px;
   }
+
+  @media ($desktop) {
+    background-position: 12px 32px;
+  }
 }
 
 .briefly___item--flower {
-  @include bg-icon("icon-feature-flower.svg", 12px, 26px);
+  @include bg-icon("icon-feature-flower.svg", 14px, 31px);
 
   @media ($tablet) {
     order: 1;
     background-position: 15px 30px;
   }
+
+  @media ($desktop) {
+    background-position: 18px 30px;
+  }
 }
 
 .briefly___item--gift {
-  @include bg-icon("icon-feature-gift.svg", 10px, 28px);
+  @include bg-icon("icon-feature-gift.svg", 10px, 32px);
 
   @media ($tablet) {
     order: 6;
     background-position: 10px 32px;
   }
+
+  @media ($desktop) {
+    background-position: 11px 33px;
+  }
 }
 
 .briefly___item--heart {
-  @include bg-icon("icon-feature-heart.svg", 12px, 32px);
+  @include bg-icon("icon-feature-heart.svg", 14px, 36px);
 
   @media ($tablet) {
     order: 5;
     background-position: 15px 35px;
   }
+
+  @media ($desktop) {
+    background-position: 17px 37px;
+  }
 }
 
 .briefly___item--money {
-  @include bg-icon("icon-feature-money.svg", 6px, 28px);
+  @include bg-icon("icon-feature-money.svg", 6px, 30px);
 
   @media ($tablet) {
     order: 3;
     background-position: 6px 32px;
   }
+
+  @media ($desktop) {
+    background-position: 10px 31px;
+  }
 }
 
 .briefly___item--rocket {
-  @include bg-icon("icon-feature-rocket.svg", 0, 30px);
+  @include bg-icon("icon-feature-rocket.svg", 0, 34px);
   padding: 83px 0 0 7px;
 
   @media ($tablet) {

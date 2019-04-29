@@ -3,14 +3,14 @@
 }
 
 .response__center-wrapper {
-  padding: 54px 30px 50px;
+  padding: 57px 30px 50px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
   background-size: 750px;
 
   @media ($tablet) {
-    padding: 80px 50px 100px;
+    padding: 76px 50px 100px 46px;
     background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat, repeat-x;
     background-position: top left, bottom center;
@@ -18,10 +18,10 @@
   }
 
   @media ($desktop) {
-    padding: 62px 50px 82px;
+    padding: 65px 50px 82px;
     background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat, repeat-x;
-    background-position: top 62px left 50px, bottom center;
+    background-position: top 65px left 50px, bottom center;
     background-size: auto, 100%;
   }
 }
@@ -40,11 +40,11 @@
 }
 
 .response__title {
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 
   @media ($tablet) {
     order: 1;
-    margin-bottom: 47px;
+    margin: 0 0 49px;
   }
 }
 
@@ -93,7 +93,7 @@
 
   @media ($desktop) {
     @include text(17px, 24px, 700);
-    margin: 0 200px 2px 2px;
+    margin: 0 200px 2px 4px;
   }
 }
 
@@ -105,7 +105,7 @@
   font-style: normal;
 
   @media ($tablet) {
-    margin: 0 200px 30px 2px;
+    margin: 0 200px 30px 4px;
   }
 }
 
@@ -123,6 +123,10 @@
     position: absolute;
     bottom: 30px;
     right: 0;
+  }
+
+  @media ($desktop) {
+    bottom: 98px;
   }
 }
 
@@ -166,7 +170,7 @@
 .response__write-button {
   @media ($tablet) {
     order: 2;
-    margin: 0 0 0 auto;
+    margin: 2px 0 0 auto;
     padding: 14px 39px;
   }
 

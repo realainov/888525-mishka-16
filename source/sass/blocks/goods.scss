@@ -20,7 +20,7 @@
     @include text(53px, 57px, 700);
     width: 1050px;
     margin: 0 auto;
-    padding: 54px 0 115px;
+    padding: 52px 0 117px;
   }
 }
 
@@ -63,13 +63,23 @@
 
   @media ($desktop) {
     flex-direction: column;
-    width: 318px;
-    margin: 0 0 55px;
+    width: 316px;
+    margin: 0 0 59px;
   }
 }
 
 .goods__image-link {
-  //
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+
+  @media ($tablet) {
+    width: 334px;
+  }
+
+  @media ($desktop) {
+    width: 316px;
+  }
 }
 
 .goods__image {
@@ -89,6 +99,7 @@
 
   @media ($desktop) {
     height: 100%;
+    padding: 25px 26px 26px;
   }
 }
 
@@ -120,7 +131,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 0 15px;
+    margin: 0 0 17px;
   }
 }
 
@@ -144,11 +155,11 @@
 
 .goods__cart {
   position: absolute;
-  right: 25px;
+  right: 28px;
   opacity: 0.2;
 
   @media ($tablet) {
-    bottom: 25px;
+    bottom: 23px;
     right: 33px;
   }
 }
