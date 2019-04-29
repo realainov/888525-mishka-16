@@ -2,6 +2,7 @@
 
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
+const remember = require('gulp-remember-cache');
 const pug = require("gulp-pug");
 const beautify = require('gulp-beautify');
 const htmlmin = require("gulp-html-minifier");
@@ -10,7 +11,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sorting = require("postcss-sorting");
 const cssnano = require("gulp-cssnano");
-const gulpbemcss = require("gulp-bem-css");
+// const gulpbemcss = require("gulp-bem-css");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
@@ -19,19 +20,19 @@ const plumber = require("gulp-plumber");
 const browsersync = require("browser-sync").create();
 
 
-gulp.task("bem", function () {
-  return gulp.src("source/*.html")
-    .pipe(gulpbemcss({
-      folder: "source/sass/blocks",
-      extension: "scss",
-      elementSeparator: "__",
-      modifierSeparator: "--"
-    }))
-    .pipe(gulp.dest("source"));
-});
+// gulp.task("bem", function () {
+//   return gulp.src("source/*.html")
+//     .pipe(gulpbemcss({
+//       folder: "source/sass/blocks",
+//       extension: "scss",
+//       elementSeparator: "__",
+//       modifierSeparator: "--"
+//     }))
+//     .pipe(gulp.dest("source"));
+// });
 
 gulp.task("pug", function () {
-  return gulp.src("source/pug/*.pug")
+  return gulp.src("source/pug/*.pug").pipe(remember({cacheName: "pages"}))
     .pipe(pug({pretty: false}))
     .pipe(beautify.html({
       "indent_size": 2,
@@ -69,7 +70,7 @@ gulp.task("sass", function () {
     })
   ];
 
-  return gulp.src(["source/sass/style.scss"])
+  return gulp.src(["source/sass/style.scss"]).pipe(remember({cacheName: "styles"}))
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
@@ -92,7 +93,7 @@ gulp.task("css-build", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/blocks/*.js")
+  return gulp.src("source/js/blocks/*.js").pipe(remember({cacheName: "scripts"}))
     .pipe(sourcemaps.init())
     .pipe(concat("app.js"))
     .pipe(sourcemaps.write("."))

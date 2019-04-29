@@ -43,11 +43,11 @@
 
   @media ($tablet) {
     @include text(20px, 22px, 700);
-    margin-left: -7px;
+    margin: 0 0 0 -7px;
   }
 
   @media ($desktop) {
-    margin-left: -4px;
+    margin: 0 0 0 -4px;
   }
 }
 
