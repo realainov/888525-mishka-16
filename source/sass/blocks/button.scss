@@ -3,8 +3,19 @@
   display: block;
   padding: 15px 0;
   border: 2px solid $text-color;
+  outline: none;
   background-color: white;
   color: $text-color;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $text-color;
+    color: white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

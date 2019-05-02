@@ -28,8 +28,18 @@
   }
 
   @media ($desktop) {
-    min-height: 457px;
+    min-height: 455px;
     padding: 41px 20px 15px 718px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -68,6 +78,7 @@
 .production__video {
   width: 260px;
   margin: 0 auto 27px;
+  position: relative;
 
   @media ($tablet) {
     order: -1;
@@ -79,6 +90,26 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &::after {
+    @include icon("../img/icon-play.svg", 101px, 77px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -38.5px;
+    margin-left: -50.5px;
+    transition: 0.1s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1.2);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    transform: scale(0.8);
   }
 }
 

@@ -66,12 +66,23 @@
     width: 316px;
     margin: 0 0 59px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .goods__image-link {
   display: block;
   width: 260px;
   margin: 0 auto;
+  outline: none;
 
   @media ($tablet) {
     width: 334px;
@@ -107,10 +118,20 @@
   @include text(17px, 24px, 700);
   margin: 0 0 5px;
   display: block;
+  outline: none;
 
   @media ($tablet) {
     @include text(20px, 24px, 700);
     margin: 0 0 6px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -154,12 +175,26 @@
 }
 
 .goods__cart {
+  outline: none;
   position: absolute;
   right: 28px;
-  opacity: 0.2;
 
   @media ($tablet) {
     bottom: 23px;
     right: 33px;
+  }
+
+  svg {
+    opacity: 0.2;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $seafoam-blue;
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }

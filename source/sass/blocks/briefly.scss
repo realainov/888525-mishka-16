@@ -10,7 +10,7 @@
   }
 
   @media ($desktop) {
-    padding: 58px 50px 0;
+    padding: 59px 50px 0;
   }
 }
 
@@ -28,7 +28,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 0 20px;
+    margin: 0 0 19px;
   }
 }
 
@@ -59,7 +59,7 @@
 
   @media ($tablet) {
     width: 320px;
-    margin: 0 14px 29px 0;
+    margin: 0 14px 28px 0;
     padding: 84px 40px 0 7px;
   }
 
@@ -69,11 +69,11 @@
 }
 
 .briefly___item--ball {
-  @include bg-icon("icon-feature-ball.svg", 10px, 33px);
+  @include bg-icon("icon-feature-ball.svg", 10px, 31px);
 
   @media ($tablet) {
     order: 2;
-    background-position: 10px 35px;
+    background-position: 10px 34px;
   }
 
   @media ($desktop) {
@@ -82,11 +82,11 @@
 }
 
 .briefly___item--flower {
-  @include bg-icon("icon-feature-flower.svg", 14px, 31px);
+  @include bg-icon("icon-feature-flower.svg", 15px, 28px);
 
   @media ($tablet) {
     order: 1;
-    background-position: 15px 30px;
+    background-position: 16px 30px;
   }
 
   @media ($desktop) {
@@ -95,11 +95,11 @@
 }
 
 .briefly___item--gift {
-  @include bg-icon("icon-feature-gift.svg", 10px, 32px);
+  @include bg-icon("icon-feature-gift.svg", 10px, 30px);
 
   @media ($tablet) {
     order: 6;
-    background-position: 10px 32px;
+    background-position: 10px 30px;
   }
 
   @media ($desktop) {
@@ -108,7 +108,7 @@
 }
 
 .briefly___item--heart {
-  @include bg-icon("icon-feature-heart.svg", 14px, 36px);
+  @include bg-icon("icon-feature-heart.svg", 14px, 35px);
 
   @media ($tablet) {
     order: 5;
@@ -121,11 +121,11 @@
 }
 
 .briefly___item--money {
-  @include bg-icon("icon-feature-money.svg", 6px, 30px);
+  @include bg-icon("icon-feature-money.svg", 8px, 30px);
 
   @media ($tablet) {
     order: 3;
-    background-position: 6px 32px;
+    background-position: 8px 31px;
   }
 
   @media ($desktop) {
@@ -134,12 +134,12 @@
 }
 
 .briefly___item--rocket {
-  @include bg-icon("icon-feature-rocket.svg", 0, 34px);
+  @include bg-icon("icon-feature-rocket.svg", 1px, 33px);
   padding: 83px 0 0 7px;
 
   @media ($tablet) {
     order: 4;
     padding: 83px 0 0 7px;
-    background-position: 0 35px;
+    background-position: 1 34px;
   }
 }

@@ -3,23 +3,30 @@
 }
 
 .contacts__center-wrapper {
-  padding: 34px 30px 39px;
+  padding: 34px 29px 39px;
   position: relative;
 
   @media ($tablet) {
     padding: 62px 50px 55px;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: top 48px right 53px;
     text-align: center;
   }
 
   @media ($desktop) {
     display: flex;
     padding: 77px 50px 105px 220px;
+    background-position: top 139px left 113px;
   }
 }
 
 .contacts__wrapper {
   @media ($desktop) {
-    padding: 71px 0 54px;
+    flex-shrink: 0;
+    width: 355px;
+    margin: 0;
+    padding: 69px 0 54px;
   }
 }
 
@@ -35,7 +42,7 @@
 
   @media ($desktop) {
     @include text(53px, 57px, 700);
-    margin: 0 0 46px;
+    margin: 0 0 48px;
     text-align: left;
   }
 }
@@ -72,6 +79,7 @@
 }
 
 .contacts__description-row:first-child {
+
   @media ($tablet) {
     margin: 0 46px 0 0;
   }
@@ -87,11 +95,11 @@
   }
 
   @media ($desktop) {
-    margin: 0 0 30px;
+    margin: 0 0 28px;
   }
 
   &:first-child {
-    width: 75px;
+    width: 76px;
 
     @media ($tablet) {
       width: 72px;
@@ -105,8 +113,19 @@
 
 .contacts__email {
   margin: 0 3px 0 0;
-  padding: 0 0 5px;
-  border-bottom: 1px solid $seafoam-blue;
+  padding: 0 0 4px;
+  border-bottom: 1px solid $greeny-blue;
+  outline: none;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $greeny-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__address {
@@ -119,27 +138,28 @@
 }
 
 .contacts__map {
+  flex-shrink: 0;
   width: 320px;
-  margin: 0 0 38px;
+  height: 457px;
+  margin: 0 0 37px;
   position: relative;
+  z-index: 1;
   left: calc((100% - 320px) / 2);
-  overflow: hidden;
+  background-image: url("../img/map-mobile@1x.jpg");
 
   @media ($tablet) {
     width: 768px;
-    margin: 0 0 54px;
+    margin: 0 0 52px;
     left: calc((100% - 768px) / 2);
+    background-image: url("../img/map-tablet@1x.jpg");
   }
 
   @media ($desktop) {
     width: 525px;
-    margin: 0 0 0 auto;
-    position: static;
+    margin: 0;
+    left: 0;
+    background-image: url("../img/map-desktop@1x.jpg");
   }
-}
-
-.contacts__image {
-  margin: 0;
 }
 
 .contacts__write-us-button {
@@ -151,7 +171,7 @@
 
   @media ($desktop) {
     position: absolute;
-    bottom: 103px;
+    bottom: 105px;
     left: 226px;
   }
 }

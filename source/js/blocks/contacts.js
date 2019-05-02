@@ -32,5 +32,3 @@ if (document.querySelector(".contacts__map") !== null) {
         .add(myPlacemark);
   });
 }
-
-//# sourceMappingURL=app.js.map

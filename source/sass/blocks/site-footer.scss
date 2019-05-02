@@ -28,9 +28,20 @@
 
 .site-footer__logo {
   display: none;
+  outline: none;
+  transition: 0.3s;
 
   @media ($tablet) {
     display: block;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $greeny-blue;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }
 
@@ -63,7 +74,17 @@
 }
 
 .site-footer__social-link {
-  //
+  outline: none;
+  transition: 0.3s;
+
+  &:hover path,
+  &:focus path {
+    fill: $greeny-blue;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
 }
 
 .site-footer__caption {

@@ -1,15 +1,19 @@
 .ware {
   background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 100%;
+
+  @media ($desktop) {
+    background-size: 1050px;
+  }
 }
 
 .ware__center-wrapper {
-  padding: 28px 30px 40px 30px;
+  padding: 27px 30px 40px 30px;
 
   @media ($tablet) {
-    padding: 35px 50px 70px;
+    padding: 36px 50px 70px;
   }
 
   @media ($desktop) {
@@ -29,15 +33,15 @@
   }
 
   @media ($desktop) {
-    padding: 52px 350px 0 45px;
+    padding: 51px 350px 0 45px;
   }
 }
 
 .ware__title {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 
   @media ($tablet) {
-    margin: 0 0 50px;
+    margin: 0 0 49px -4px;
   }
 
   @media ($desktop) {
@@ -48,7 +52,7 @@
 .ware__best-article {
   @include text(17px, 20px, 700);
   display: block;
-  margin: 0 0 23px;
+  margin: 0 0 22px;
   color: $seafoam-blue;
   text-transform: uppercase;
 
@@ -77,7 +81,7 @@
 
 .ware__text {
   @include text(15px, 24px);
-  margin: 0 0 17px;
+  margin: 0 0 16px;
   color: $text-color;
 
   @media ($tablet) {
@@ -102,7 +106,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 0 110px;
+    margin: 0 0 107px;
   }
 }
 
@@ -112,7 +116,11 @@
 }
 
 .ware__description-col {
-  padding: 10px 0;
+  padding: 10px 0 9px;
+
+  @media ($desktop) {
+    padding: 9px 0 11px;
+  }
 
   &:first-child {
     width: 96px;
@@ -123,7 +131,7 @@
 .ware__image {
   display: block;
   width: 260px;
-  margin: 0 auto 22px;
+  margin: 0 auto 23px;
 
   @media ($tablet) {
     width: 333px;
@@ -143,7 +151,7 @@
 .ware__price {
   @include text(17px, 24px, 700);
   display: block;
-  margin-bottom: 25px;
+  margin: 0 0 25px -3px;
   color: $text-color;
   text-align: center;
 
@@ -151,11 +159,11 @@
     @include text(20px, 24px, 700);
     align-self: center;
     width: 100%;
-    margin: 0 0 34px;
+    margin: 0 0 33px;
   }
 
   @media ($desktop) {
-    margin: 0 0 35px;
+    margin: 0 0 33px;
   }
 }
 
