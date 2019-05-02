@@ -96,7 +96,7 @@
 .site-navigation__order {
   @media ($tablet) {
     @include text(15px, 24px, 700);
-    margin: 17px 0 0 37px;
+    margin: 18px 0 0 37px;
     padding: 0;
   }
 }
@@ -135,6 +135,16 @@
 .site-navigation__logo-link {
   display: flex;
   margin: 22px auto 22px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media ($tablet) {
     margin: 22px auto 20px 0;
@@ -152,7 +162,7 @@
 .site-navigation__catalog {
   @media ($tablet) {
     order: 2;
-    margin: 17px 0 0 0;
+    margin: 18px 0 0 0;
   }
 
   @media ($desktop) {
@@ -219,7 +229,12 @@
 
   svg {
     margin-top: -8px;
-    left: -51px;
+    left: -46px;
+
+    @media ($tablet) {
+      margin-top: -10px;
+      left: -51px;
+    }
 
     @media ($desktop) {
       left: -53px;
@@ -261,10 +276,40 @@
 
 .site-navigation__link {
   position: relative;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: black;
+    opacity: 0.3;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 1;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $seafoam-blue;
+  }
 
   svg {
     position: absolute;
     top: 50%;
     opacity: 0.2;
+    transition: 0.3s;
+  }
+
+  path {
+    transition: 0.3s;
   }
 }

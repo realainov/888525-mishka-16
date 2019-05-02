@@ -1,15 +1,15 @@
 .order-form {
-  padding: 22px 30px 52px;
+  padding: 23px 30px 56px;
 
   @media ($tablet) {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 56px 0 52px;
+    padding: 54px 0 50px;
   }
 
   @media ($desktop) {
-    padding: 56px 0 46px;
+    padding: 56px 0 47px;
   }
 }
 
@@ -26,7 +26,11 @@
   margin: 0 0 10px;
 
   @media ($tablet) {
-    margin: 0 0 50px;
+    margin: 0 0 52px;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 49px;
   }
 }
 
@@ -34,13 +38,17 @@
   margin: 0 0 30px;
 
   @media ($tablet) {
-    margin: 0 0 50px;
+    margin: 0 0 49px;
     background-color: $footer-color;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 50px;
   }
 }
 
 .order-form__fullname-fieldset {
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 
   @media ($tablet) {
     margin: 0 0 29px;
@@ -51,8 +59,12 @@
   margin: 0 0 12px;
 
   @media ($tablet) {
-    margin: 0 0 50px;
+    margin: 0 0 47px;
     background-color: $footer-color;
+  }
+
+  @media ($desktop) {
+    margin: 0 0 50px;
   }
 }
 
@@ -66,7 +78,7 @@
 }
 
 .order-form__type-fieldset {
-  margin: 0 0 34px;
+  margin: 0 0 30px;
 
   @media ($tablet) {
     margin: 0 0 30px;
@@ -117,7 +129,7 @@
 
   @media ($desktop) {
     margin: 0 auto;
-    padding: 24px 225px 48px 110px;
+    padding: 24px 225px 51px 110px;
   }
 }
 
@@ -125,7 +137,7 @@
   position: relative;
 
   @media ($tablet) {
-    margin: 48px 0 0;
+    margin: 49px 0 0;
   }
 
   @media ($desktop) {
@@ -149,7 +161,7 @@
   text-transform: uppercase;
 
   @media ($tablet) {
-    width: 165px;
+    width: 167px;
     margin: 20px 0 0;
     flex-shrink: 0;
   }
@@ -161,7 +173,7 @@
   &::after {
     height: 1px;
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 0;
     background-color: $seafoam-blue;
     content: "";
@@ -179,6 +191,7 @@
 
   @media ($desktop) {
     width: 115px;
+    margin: 18px 0 0;
   }
 
   &::after {
@@ -205,10 +218,10 @@
 
   @media ($tablet) {
     width: 167px;
-    margin: 17px 0 0;
+    margin: 19px 0 0;
   }
 
-  @media ($tablet) {
+  @media ($desktop) {
     width: 116px;
   }
 
@@ -218,7 +231,7 @@
 }
 
 .order-form__email-legend {
-  margin: 0 0 6px;
+  margin: 0 0 7px;
 
   @media ($tablet) {
     margin: 17px 0 0;
@@ -226,6 +239,7 @@
 
   @media ($desktop) {
     width: 115px;
+    margin: 19px 0 0;
   }
 
   &::after {
@@ -234,7 +248,7 @@
 }
 
 .order-form__phone-legend {
-  margin: 0 0 5px;
+  margin: 0 0 7px;
 
   @media ($tablet) {
     margin: 17px 0 0;
@@ -242,6 +256,7 @@
 
   @media ($desktop) {
     width: 115px;
+    margin: 18px 0 0;
   }
 
   &::after {
@@ -310,7 +325,7 @@
   @media ($tablet) {
     display: flex;
     align-items: center;
-    margin-bottom: 23px;
+    margin: 0 0 24px;
   }
 }
 
@@ -332,6 +347,7 @@
     top: 2px;
     left: 0;
     content: "";
+    transition: 0.3s;
 
     @media ($tablet) {
       width: 52px;
@@ -339,12 +355,22 @@
     }
   }
 
+  &:hover::before,
+  &:focus::before {
+    border: 2px solid $aquamarin-blue;
+  }
+
+  &:active::before {
+    border: 2px solid $text-color;
+    opacity: 0.3;
+  }
+
   &::after {
     width: 16px;
     height: 16px;
     border-radius: 50%;
     position: absolute;
-    top: 12px;
+    top: 15px;
     left: 12px;
     background-color: transparent;
     content: "";
@@ -352,15 +378,32 @@
     @media ($tablet) {
       width: 22px;
       height: 22px;
-      top: 15px;
+      top: 17px;
       left: 15px;
     }
   }
 }
 
+.order-form__radio:focus + .order-form__label::before {
+  border: 2px solid $aquamarin-blue;
+  transition: 0.3s;
+}
+
 .order-form__radio:checked + .order-form__label {
   &::after {
-    background-color: $seafoam-blue;
+    background-color: $aquamarin-blue;
+  }
+}
+
+.order-form__radio:disabled + .order-form__label {
+  &:hover::before,
+  &:focus::before {
+    border: 2px solid $text-color;
+  }
+
+  &:active::before {
+    border: 2px solid $text-color;
+    opacity: 1;
   }
 }
 
@@ -380,12 +423,29 @@
     background-repeat: no-repeat;
     background-position: center;
     content: "";
+    transition: 0.3s;
 
     @media ($tablet) {
       width: 54px;
       height: 52px;
     }
   }
+
+  &:hover::before,
+  &:focus::before {
+    border: 2px solid $aquamarin-blue;
+  }
+
+  &:active::before {
+    border: 2px solid $text-color;
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+}
+
+.order-form__checkbox:focus + .order-form__label::before {
+  border: 2px solid $aquamarin-blue;
+  transition: 0.3s;
 }
 
 .order-form__checkbox:checked + .order-form__label {
@@ -394,21 +454,48 @@
   }
 }
 
+.order-form__checkbox:disabled + .order-form__label {
+  &:hover::before,
+  &:focus::before {
+    border: 2px solid $text-color;
+  }
+
+  &:active::before {
+    border: 2px solid $text-color;
+    opacity: 1;
+  }
+}
+
 .order-form__field {
   @include text(17px, 18px);
   width: 100%;
-  height: 53px;
-  margin: 0 0 22px;
+  height: 52px;
+  margin: 0 0 21px;
   padding: 0 44px 0 0;
   border: none;
   border-bottom: 2px solid black;
+  outline: none;
   background-color: transparent;
   color: rgba(68, 68, 68, 0.3);
+  transition: 0.3s;
 
   @media ($tablet) {
     @include text(19px, 18px);
     margin: 0 0 0 auto;
-    padding: 0 44px 0 15px;
+    padding: 0 44px 0 18px;
+  }
+
+  @media ($desktop) {
+    padding: 0 44px 0 16px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $aquamarin-blue;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $aquamarin-blue;
+    color: $text-color;
   }
 }
 
@@ -417,11 +504,32 @@
 }
 
 .order-form__email-field {
-  //
+  transition: 0.3s;
+
+  & + .order-form__email-label path {
+    opacity: 0.2;
+  }
+
+  &:hover + .order-form__email-label path,
+  &:focus + .order-form__email-label path {
+    fill: $aquamarin-blue;
+    opacity: 1;
+  }
 }
 
 .order-form__phone-field {
   @include text(19px, 19px);
+  transition: 0.3s;
+
+  & + .order-form__phone-label path {
+    opacity: 0.2;
+  }
+
+  &:hover + .order-form__phone-label path,
+  &:focus + .order-form__phone-label path {
+    fill: $aquamarin-blue;
+    opacity: 1;
+  }
 }
 
 .order-form__textarea {
@@ -430,14 +538,25 @@
   height: 142px;
   padding: 15px;
   border: 2px solid $text-color;
+  outline: none;
   background-color: transparent;
   color: rgba(68, 68, 68, 0.3);
   resize: none;
+  transition: 0.3s;
 
   @media ($tablet) {
     @include text(19px, 18px);
     margin: 0 0 0 auto;
-    padding: 13px;
+    padding: 13px 16px;
+  }
+
+  &:hover {
+    border: 2px solid $aquamarin-blue;
+  }
+
+  &:focus {
+    border: 2px solid $aquamarin-blue;
+    color: $text-color;
   }
 }
 
@@ -462,7 +581,7 @@
 
   @media ($tablet) {
     margin: 0 0 26px;
-    padding: 17px 0 17px 80px;
+    padding: 17px 0 16px 80px;
   }
 }
 
@@ -470,19 +589,18 @@
   display: block;
 
   @media ($tablet) {
-    margin: 0 26px 0 0;
+    margin: 0 24px 0 0;
   }
 }
 
 .order-form__email-label {
   position: absolute;
   bottom: 27px;
-  right: 6px;
-  opacity: 0.2;
+  right: 4px;
 
   @media ($tablet) {
     top: 12px;
-    right: 71px;
+    right: 72px;
   }
 
   @media ($desktop) {
@@ -495,7 +613,6 @@
   position: absolute;
   bottom: 36px;
   right: 8px;
-  opacity: 0.2;
 
   @media ($tablet) {
     bottom: 15px;
@@ -518,23 +635,19 @@
 
   @media ($tablet) {
     margin: 0 0 22px;
-    padding: 18px 0 18px 81px;
+    padding: 18px 0 18px 80px;
   }
 }
 
 .order-form__required {
   @include text(14px, 16px);
   display: block;
-  margin-bottom: 30px;
+  margin: 0 0 29px;
   color: $text-color;
 
   @media ($tablet) {
     @include text(17px, 30px);
     order: 2;
-    margin: 10px 0 0 auto;
-  }
-
-  @media ($desktop) {
     margin: 10px 0 0 auto;
   }
 }

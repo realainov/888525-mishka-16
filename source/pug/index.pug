@@ -40,12 +40,12 @@ html(lang="ru")
       section.catalog.site-main__catalog
         h2.visually-hidden Разделы каталога
         div.center-wrapper.catalog__center-wrapper
-          b.title.catalog__title Милые штуки ручной работы для дома
+          b.title.catalog__title Милые штуки ручной работы&nbsp;для&nbsp;дома
           ul.catalog__list
-            li.catalog__item.catalog__item--interior
-              a.catalog__link(href="#") Предметы интерьера
-            li.catalog__item.catalog__item--toy
-              a.catalog__link(href="#") Детские игрушки
+            li.catalog__item
+              a.catalog__link.catalog__link--interior(href="#") Предметы интерьера
+            li.catalog__item
+              a.catalog__link.catalog__link--toy(href="#") Детские игрушки
       section.ware.site-main__ware
         div.center-wrapper.ware__center-wrapper
           div.ware__wrapper
@@ -117,11 +117,8 @@ html(lang="ru")
                   td.contacts__description-col адрес:
                   td.contacts__description-col
                     address.contacts__address г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101
-          div.contacts__map
-            picture.contacts__image
-              source(media=desktop srcset="img/map-desktop@1x.jpg")
-              source(media=tablet srcset="img/map-tablet@1x.jpg")
-              img(src="img/map-mobile@1x.jpg" alt="Наше расположение")
+          div.contacts__map#map
           a.button.contacts__write-us-button(href="#") Написать нам
     include blocks/site-footer
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c50c4cad-f438-4cfc-8c3d-9eb6374817dd" type="text/javascript")
     script(src="js/app.js")

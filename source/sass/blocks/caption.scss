@@ -8,8 +8,19 @@
 .caption__htmlacademy {
   display: block;
   margin: 6px 0 0 30px;
+  outline: none;
+  transition: 0.3s;
 
   svg {
     fill: $seafoam-blue;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $greeny-blue;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }

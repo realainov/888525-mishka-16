@@ -3,26 +3,25 @@
 }
 
 .response__center-wrapper {
-  padding: 54px 30px 50px;
+  padding: 55px 30px 50px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom center;
-  background-size: 750px;
+  background-size: 100%;
 
   @media ($tablet) {
-    padding: 80px 50px 100px;
+    padding: 76px 50px 100px 46px;
     background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat, repeat-x;
+    background-repeat: no-repeat;
     background-position: top left, bottom center;
     background-size: auto, 100%;
   }
 
   @media ($desktop) {
-    padding: 62px 50px 82px;
+    padding: 63px 50px 82px;
     background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat, repeat-x;
-    background-position: top 62px left 50px, bottom center;
-    background-size: auto, 100%;
+    background-position: top 65px left 50px, bottom center;
+    background-size: auto, 1050px;
   }
 }
 
@@ -40,11 +39,11 @@
 }
 
 .response__title {
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 
   @media ($tablet) {
     order: 1;
-    margin-bottom: 47px;
+    margin: 0 0 49px;
   }
 }
 
@@ -66,12 +65,12 @@
 
 .response__comment-quote {
   @include text(15px, 30px);
-  margin: 0 0 30px;
+  margin: 0 0 27px;
   color: $text-color;
 
   @media ($tablet) {
     @include text(17px, 30px);
-    margin: 0 0 59px 4px;
+    margin: 0 0 57px 4px;
   }
 
   @media ($desktop) {
@@ -93,25 +92,25 @@
 
   @media ($desktop) {
     @include text(17px, 24px, 700);
-    margin: 0 200px 2px 2px;
+    margin: 0 200px 2px 4px;
   }
 }
 
 .response__comment-tag {
   @include text(17px, 30px);
   display: block;
-  margin-bottom: 30px;
+  margin: 0 0 28px;
   color: $text-color;
   font-style: normal;
 
   @media ($tablet) {
-    margin: 0 200px 30px 2px;
+    margin: 0 200px 30px 4px;
   }
 }
 
 .response__control-list {
   display: flex;
-  margin: 0 auto 35px;
+  margin: 0 auto 36px;
   padding: 0;
   border: 1px solid $border-color;
   list-style: none;
@@ -124,10 +123,15 @@
     bottom: 30px;
     right: 0;
   }
+
+  @media ($desktop) {
+    bottom: 98px;
+  }
 }
 
 .response__control-item {
   width: 50%;
+  height: 51px;
 
   @media ($tablet) {
     width: auto;
@@ -144,14 +148,25 @@
 
 .response__control-button {
   width: 100%;
-  height: 45px;
+  height: 100%;
+  outline: none;
   background-color: transparent;
   background-position: center 12px;
   background-repeat: no-repeat;
   border: none;
+  transition: 0.3s;
 
   @media ($tablet) {
     width: 88px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -166,7 +181,7 @@
 .response__write-button {
   @media ($tablet) {
     order: 2;
-    margin: 0 0 0 auto;
+    margin: 2px 0 0 auto;
     padding: 14px 39px;
   }
 
