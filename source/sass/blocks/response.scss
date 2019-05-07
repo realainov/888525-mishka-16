@@ -58,9 +58,11 @@
 }
 
 .response__comment-item {
-  &:not(:first-child) {
-    display: none;
-  }
+  display: none;
+}
+
+.response__comment-item--show {
+  display: block;
 }
 
 .response__comment-quote {

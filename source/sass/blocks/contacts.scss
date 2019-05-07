@@ -139,26 +139,28 @@
 
 .contacts__map {
   flex-shrink: 0;
-  width: 320px;
+  width: calc(100% + 60px);
   height: 457px;
   margin: 0 0 37px;
   position: relative;
   z-index: 1;
-  left: calc((100% - 320px) / 2);
-  background-image: url("../img/map-mobile@1x.jpg");
+  left: -30px;
+  background-image: url("../img/icon-map-pin.svg"), url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media ($tablet) {
-    width: 768px;
+    width: calc(100% + 100px);
     margin: 0 0 52px;
-    left: calc((100% - 768px) / 2);
-    background-image: url("../img/map-tablet@1x.jpg");
+    left: -50px;
+    background-image: url("../img/icon-map-pin.svg"), url("../img/map-tablet@1x.jpg");
   }
 
   @media ($desktop) {
     width: 525px;
     margin: 0;
     left: 0;
-    background-image: url("../img/map-desktop@1x.jpg");
+    background-image: url("../img/icon-map-pin.svg"), url("../img/map-desktop@1x.jpg");
   }
 }
 
