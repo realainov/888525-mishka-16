@@ -4,15 +4,29 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -18px;
+  background-size: 575px;
   text-align: center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center -40px;
+    background-size: 1150px;
+  }
+
+  @media ($tablet) and (min-resolution: 144dpi), ($tablet) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-tablet@2x.jpg");
   }
 
   @media ($desktop) {
     background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  @media ($desktop) and (min-resolution: 144dpi), ($desktop) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
   }
 
   &::after {
@@ -69,6 +83,7 @@
   @media ($tablet) {
     @include text(20px, 30px, 700);
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 2px solid white;
   }
 
@@ -84,7 +99,7 @@ $catalog-up-size: 5px;
   position: relative;
   text-align: left;
 
-  @for $i from 1 through 2 {
+  @for $i from 1 through 10 {
     $percent: 3.4% * (-1 + $i);
 
     &:nth-child(#{$i}) {
@@ -115,6 +130,7 @@ $catalog-up-size: 5px;
   }
 
   @media ($tablet) {
+    flex-grow: 1;
     width: 50%;
   }
 }

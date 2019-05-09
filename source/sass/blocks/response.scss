@@ -14,12 +14,15 @@
     background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat;
     background-position: top left, bottom center;
-    background-size: auto, 100%;
+    background-size: 350px, 100%;
+  }
+
+  @media ($tablet) and (min-resolution: 144dpi), ($tablet) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/review@2x.jpg"), url("../img/bg-zigzag-line.svg");
   }
 
   @media ($desktop) {
     padding: 63px 50px 82px;
-    background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
     background-position: top 65px left 50px, bottom center;
     background-size: auto, 1050px;
   }

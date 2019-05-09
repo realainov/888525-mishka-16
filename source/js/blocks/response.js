@@ -1,9 +1,9 @@
 if (document.querySelector(".response") !== null) {
-  var comments = document.querySelectorAll(".response__comment-item");
-  var buttonPrev = document.querySelector(".response__control-button--prev");
-  var buttonNext = document.querySelector(".response__control-button--next");
+  let comments = document.querySelectorAll(".response__comment-item");
+  let buttonPrev = document.querySelector(".response__control-button--prev");
+  let buttonNext = document.querySelector(".response__control-button--next");
 
-  var l = comments.length - 2;
+  let l = comments.length - 2;
 
   buttonNext.addEventListener("click", function (evt) {
 

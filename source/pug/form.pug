@@ -45,7 +45,7 @@ html(lang="ru")
         form.order-form.order__order-form(action="https://echo.htmlacademy.ru" method="get")
           div.order-form__fieldset.order-form__type-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__type-wrapper
-              legend.order-form__legend.order-form__type-legend Тип
+              h3.order-form__legend.order-form__type-legend Тип
               ul.order-form__list.order-form__type-list
                 li.order-form__item.order-form__type-item
                   input.order-form__radio.order-form__type-radio.visually-hidden(name="type" id="accessory-input" type="radio" value="accessory" checked)
@@ -55,7 +55,7 @@ html(lang="ru")
                   label.order-form__label.order-form__type-label(for="toy-input") Детская игрушка
           div.order-form__fieldset.order-form__color-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__color-wrapper
-              legend.order-form__legend.order-form__color-legend Цвет
+              h3.order-form__legend.order-form__color-legend Цвет
               ul.order-form__list.order-form__color-list
                 li.order-form__item.order-form__color-item
                   input.order-form__checkbox.order-form__color-checkbox.visually-hidden(name="white" id="white-input" type="checkbox")
@@ -77,7 +77,7 @@ html(lang="ru")
                   label.order-form__label.order-form__color-label(for="orange-input") Оранжевый
           div.order-form__fieldset.order-form__fullname-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__fullname-wrapper
-              legend.order-form__legend.order-form__fullname-legend ФИО
+              h3.order-form__legend.order-form__fullname-legend ФИО
               ul.order-form__list.order-form__fullname-list
                 li.order-form__item.order-form__fullname-item
                   label.order-form__label.order-form__fullname-label(for="first-name-field") Имя:
@@ -90,19 +90,19 @@ html(lang="ru")
                   input.order-form__field.order-form__fullname-field(name="middle-name" id="middle-name-field" type="text" placeholder="Отчество, если желаете")
           div.order-form__fieldset.order-form__phone-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__phone-wrapper
-              legend.order-form__legend.order-form__phone-legend Тел
+              h3.order-form__legend.order-form__phone-legend Тел
               input.order-form__field.order-form__phone-field(name="phone" id="phone-field" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required)
               label.order-form__label.order-form__phone-label(for="phone-field")
                 include ../img/icon-phone.svg
           div.order-form__fieldset.order-form__email-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__email-wrapper
-              legend.order-form__legend.order-form__email-legend E-mail
+              h3.order-form__legend.order-form__email-legend E-mail
               input.order-form__field.order-form__email-field(name="email" id="email-field" type="email" placeholder="Ваш Email*" required)
               label.order-form__label.order-form__email-label(for="email-field")
                 include ../img/icon-mail.svg
           div.order-form__fieldset.order-form__add-fieldset
             div.center-wrapper.order-form__center-wrapper.order-form__add-wrapper
-              legend.order-form__legend.order-form__add-legend Доп
+              h3.order-form__legend.order-form__add-legend Доп
               textarea.order-form__textarea.order-form__add-textarea(name="addition" id="addition-field" placeholder="Опишите все ваши пожелания к заказу")
           div.center-wrapper.order-form__center-wrapper
             span.order-form__required *Поля обязательны для заполнения

@@ -1,4 +1,5 @@
 .site-navigation {
+  @include text(17px, 24px, 700);
   position: relative;
 
   &::after {
@@ -37,6 +38,7 @@
 }
 
 .site-navigation__menu-toggle {
+  display: none;
   width: 21px;
   height: 21px;
   outline: none;
@@ -48,6 +50,10 @@
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.site-navigation__menu-toggle--block {
+  display: block;
 
   @media ($tablet) {
     display: none;
@@ -70,13 +76,25 @@
 }
 
 .site-navigation__item {
-  display: flex;
+  display: none;
   border-bottom: 1px solid $border-color;
   padding: 26px 0 28px 76px;
 
   @media ($tablet) {
+    @include text(15px, 24px, 700);
+    order: 2;
+    margin: 18px 0 0 37px;
     border-bottom: none;
+    padding: 0;
   }
+
+  @media ($desktop) {
+    order: 4;
+  }
+}
+
+.site-navigation__item--show {
+  display: flex;
 }
 
 .site-navigation__new,
@@ -86,7 +104,7 @@
   @media ($desktop) {
     @include text(15px, 24px, 700);
     display: block;
-    padding: 17px 0 0 60px;
+    margin: 17px 0 0 60px;
   }
 }
 
@@ -94,17 +112,14 @@
 .site-navigation__search,
 .site-navigation__cart {
   @media ($tablet) {
+    order: 1;
     width: auto;
+    margin: 0;
     padding: 0;
   }
-}
 
-.site-navigation__catalog,
-.site-navigation__order {
-  @media ($tablet) {
-    @include text(15px, 24px, 700);
-    margin: 18px 0 0 37px;
-    padding: 0;
+  @media ($desktop) {
+    order: 2;
   }
 }
 
@@ -112,8 +127,6 @@
 .site-navigation__order,
 .site-navigation__search,
 .site-navigation__cart {
-  display: none;
-
   @media ($tablet) {
     display: flex;
   }
@@ -122,10 +135,6 @@
     @include text(17px, 24px, 700);
     margin: 0;
   }
-}
-
-.site-navigation__item--show {
-  display: flex;
 }
 
 .site-navigation__logo {
@@ -179,12 +188,11 @@
 
 .site-navigation__catalog {
   @media ($tablet) {
-    order: 2;
     margin: 18px 0 0 0;
   }
 
   @media ($desktop) {
-    order: -1;
+    order: 1;
     margin: 0;
     border-right: 1px solid $border-color;
     padding: 32px 34px 32px 0;
@@ -193,12 +201,12 @@
 
 .site-navigation__order {
   @media ($tablet) {
-    order: 2;
+    order: 3;
   }
 
   @media ($desktop) {
     flex-grow: 0;
-    order: -1;
+    order: 1;
     padding: 32px 34px;
   }
 }
@@ -237,6 +245,8 @@
 }
 
 .site-navigation__cart {
+  @include text(17px, 24px, 700);
+
   @media ($tablet) {
     padding: 32px 0 32px 83px;
   }
@@ -262,28 +272,28 @@
 
 .site-navigation__new {
   @media ($desktop) {
-    padding: 17px 0 0 0;
+    order: 3;
+    margin: 17px 0 0 0;
   }
 }
 
 .site-navigation__sale {
   @media ($desktop) {
-    flex-grow: 1;
+    order: 3;
   }
 }
 
 .site-navigation__delivery {
   display: none;
-  order: 2;
 
   @media ($tablet) {
     display: block;
-    margin-left: auto;
-    padding: 17px 0 0 0;
+    order: 4;
+    margin: 17px 0 0 auto;
   }
 
   @media ($desktop) {
-    padding: 17px 0 0 0;
+    order: 5;
   }
 
   .site-navigation__text {
