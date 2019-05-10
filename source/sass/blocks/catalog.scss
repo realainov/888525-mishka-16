@@ -4,15 +4,29 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -18px;
+  background-size: 575px;
   text-align: center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 
   @media ($tablet) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center -40px;
+    background-size: 1150px;
+  }
+
+  @media ($tablet) and (min-resolution: 144dpi), ($tablet) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-tablet@2x.jpg");
   }
 
   @media ($desktop) {
     background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  @media ($desktop) and (min-resolution: 144dpi), ($desktop) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
   }
 
   &::after {
@@ -69,6 +83,7 @@
   @media ($tablet) {
     @include text(20px, 30px, 700);
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 2px solid white;
   }
 
@@ -84,38 +99,51 @@ $catalog-up-size: 5px;
   position: relative;
   text-align: left;
 
-  @for $i from 1 through 2 {
-    $percent: 3.4% * (-1 + $i);
-
-    &:nth-child(#{$i}) {
-      background-color: darken($seafoam-blue, $percent);
-    }
-
-    &:nth-child(#{$i}):hover,
-    &:nth-child(#{$i}):focus {
-      background-color: darken(darken($seafoam-blue, $percent), 2.5%);
-    }
-
-    &:nth-child(#{$i})::before {
-      width: 100%;
-      height: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: darken(darken($seafoam-blue, $percent), 2.5%);
-      content: "";
-      transition: 0.3s;
-    }
-
-    &:nth-child(#{$i}):hover::before,
-    &:nth-child(#{$i}):focus::before {
-      height: $catalog-up-size;
-      top: -$catalog-up-size;
-    }
+  @media ($tablet) {
+    flex-grow: 1;
+    width: 50%;
   }
 
-  @media ($tablet) {
-    width: 50%;
+  &:nth-child(odd) {
+    background-color: $seafoam-blue;
+  }
+
+  &:nth-child(even) {
+    background-color: $aqua-marine;
+  }
+
+  &:nth-child(odd):hover,
+  &:nth-child(odd):focus {
+    background-color: $seafoam-blue-two;
+  }
+
+  &:nth-child(even):hover,
+  &:nth-child(even):focus {
+    background-color: $aqua-marine-two;
+  }
+
+  &::before {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    transition: 0.3s;
+  }
+
+  &:nth-child(odd)::before {
+    background-color: $seafoam-blue-two;
+  }
+
+  &:nth-child(even)::before {
+    background-color: $aqua-marine-two;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    height: $catalog-up-size;
+    top: -$catalog-up-size;
   }
 }
 

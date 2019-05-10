@@ -32,7 +32,7 @@ const browsersync = require("browser-sync").create();
 // });
 
 gulp.task("pug", function () {
-  return gulp.src("source/pug/*.pug").pipe(remember({cacheName: "pages"}))
+  return gulp.src("source/pug/*.pug")//.pipe(remember({cacheName: "pages"}))
     .pipe(pug({pretty: false}))
     .pipe(beautify.html({
       "indent_size": 2,
@@ -41,7 +41,8 @@ gulp.task("pug", function () {
       "inline": [],
       "unformatted": [],
       "content_unformatted": [],
-      "extra_liners": []
+      "extra_liners": [],
+      "editorconfig": true
     }))
     .pipe(gulp.dest("source"));
 });
@@ -70,7 +71,7 @@ gulp.task("sass", function () {
     })
   ];
 
-  return gulp.src(["source/sass/style.scss"]).pipe(remember({cacheName: "styles"}))
+  return gulp.src(["source/sass/style.scss"])//.pipe(remember({cacheName: "styles"}))
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
@@ -93,7 +94,7 @@ gulp.task("css-build", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/blocks/*.js").pipe(remember({cacheName: "scripts"}))
+  return gulp.src(["source/js/**/*.js", "!source/js/app.js"])//.pipe(remember({cacheName: "scripts"}))
     .pipe(sourcemaps.init())
     .pipe(concat("app.js"))
     .pipe(sourcemaps.write("."))
@@ -109,9 +110,9 @@ gulp.task("js-build", function () {
 });
 
 gulp.task("img-build", function () {
-  return gulp.src("app/img/*")
+  return gulp.src("source/img/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("browser-sync", function () {
@@ -125,8 +126,9 @@ gulp.task("browser-sync", function () {
 
 gulp.task("source", function () {
   gulp.watch("source/pug/**/*.pug", gulp.parallel("pug"));
+  gulp.watch("source/img/*", gulp.parallel("pug"));
   gulp.watch("source/sass/**/*.scss", gulp.parallel("sass"));
-  gulp.watch("source/js/blocks/*.js", gulp.parallel("js"));
+  gulp.watch(["source/js/**/*.js", "!source/js/app.js"], gulp.parallel("js"));
 });
 
 gulp.task("build", gulp.parallel("html-build", "css-build", "js-build", "img-build"));

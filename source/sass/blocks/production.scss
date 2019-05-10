@@ -77,44 +77,60 @@
 
 .production__video {
   width: 260px;
+  height: 150px;
   margin: 0 auto 27px;
   position: relative;
 
   @media ($tablet) {
     order: -1;
     width: 668px;
+    height: 455px;
     margin: 0 auto 37px;
   }
 
   @media ($desktop) {
+    width: 682px;
+    height: 455px;
     position: absolute;
     top: 0;
     left: 0;
   }
 
-  &::after {
-    @include icon("../img/icon-play.svg", 101px, 77px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -38.5px;
-    margin-left: -50.5px;
-    transition: 0.1s;
+  &:hover .production__video-button,
+  &:focus .production__video-button {
+    transform: scale(1.2);
   }
+}
 
-  &:hover::after,
-  &:focus::after {
+.production__video-button {
+  margin-top: -38.5px;
+  margin-left: -50.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transition: 0.1s;
+
+  &:hover,
+  &:focus {
     transform: scale(1.2);
   }
 
-  &:active::after {
+  &:active {
     opacity: 0.3;
     transform: scale(0.8);
   }
 }
 
-.production__image {
-  //
+.production__video-image {
+  position: relative;
+}
+
+.production__video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .production__text {

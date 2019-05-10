@@ -12,28 +12,28 @@ html(lang="ru")
         div.center-wrapper.site-navigation__center-wrapper
           button.site-navigation__menu-toggle(type="button" title="Открыть меню")
           ul.site-navigation__list
-            li.site-navigation__item.site-navigation__logo
+            li.site-navigation__item.site-navigation__logo.site-navigation__item--show
               a.site-navigation__logo-link
                 picture.site-navigation__logo-image
                   source(media=desktop srcset="img/logo-desktop.svg")
                   source(media=tablet srcset="img/logo-tablet.svg")
                   img(src="img/logo-mobile.svg" alt="Логотип компании «MISHKA»")
-            li.site-navigation__item.site-navigation__catalog
+            li.site-navigation__item.site-navigation__catalog.site-navigation__item--show
               a.site-navigation__link(href="catalog.html") Каталог товаров
-            li.site-navigation__item.site-navigation__order
+            li.site-navigation__item.site-navigation__order.site-navigation__item--show
               a.site-navigation__link(href="form.html") Вязание на заказ
-            li.site-navigation__item.site-navigation__search
+            li.site-navigation__item.site-navigation__search.site-navigation__item--show
               a.site-navigation__link(href="#")
                 span.site-navigation__text Поиск по сайту
                 include ../img/icon-search.svg
-            li.site-navigation__item.site-navigation__cart
+            li.site-navigation__item.site-navigation__cart.site-navigation__item--show
               a.site-navigation__link(href="#") Корзина: пока пуста
                 include ../img/icon-cart.svg
-            li.site-navigation__item.site-navigation__new
+            li.site-navigation__item.site-navigation__new.site-navigation__item--show
               a.site-navigation__link(href="#") Новые поступления
-            li.site-navigation__item.site-navigation__sale
+            li.site-navigation__item.site-navigation__sale.site-navigation__item--show
               a.site-navigation__link(href="#") Распродажа
-            li.site-navigation__item.site-navigation__delivery
+            li.site-navigation__item.site-navigation__delivery.site-navigation__item--show
               span.site-navigation__text Бесплатная доставка по России
     main.site-main
       h1.visually-hidden Главная страница / Интернет-магазин «MISHKA»
@@ -43,9 +43,9 @@ html(lang="ru")
           b.title.catalog__title Милые штуки ручной работы&nbsp;для&nbsp;дома
           ul.catalog__list
             li.catalog__item
-              a.catalog__link.catalog__link--interior(href="#") Предметы интерьера
+              a.catalog__link.catalog__link--interior(href="interior.html") Предметы интерьера
             li.catalog__item
-              a.catalog__link.catalog__link--toy(href="#") Детские игрушки
+              a.catalog__link.catalog__link--toy(href="toy.html") Детские игрушки
       section.ware.site-main__ware
         div.center-wrapper.ware__center-wrapper
           div.ware__wrapper
@@ -64,9 +64,9 @@ html(lang="ru")
                   td.ware__description-col Высота:
                   td.ware__description-col 15 см
               picture.ware__image
-                source(media=desktop srcset="img/triple-set-desktop@1x.jpg")
-                source(media=tablet srcset="img/triple-set-tablet@1x.jpg")
-                img(src="img/triple-set-mobile@1x.jpg" alt="Изображение вязаных корзинок")
+                source(media=desktop srcset="img/triple-set-desktop@2x.jpg 2x, img/triple-set-desktop@1x.jpg 1x")
+                source(media=tablet srcset="img/triple-set-tablet@2x.jpg 2x, img/triple-set-tablet@1x.jpg 1x")
+                img(src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Изображение вязаных корзинок")
               span.ware__price Цена: 990 руб.
               a.button.ware__order-button(href="#") Заказать
       section.briefly.site-main__briefly
@@ -86,14 +86,14 @@ html(lang="ru")
             h2.title.response__title Отзывы
             ul.response__comment-list
               li.response__comment-item
-                blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-                cite.response__comment-author Анастасия Красильникова
-                cite.response__comment-tag @misssssiskras
+                blockquote.response__comment-quote Давно получила такую классную карзинку, но забывал ответить. Так вот - вещь очень практичная,особенно для меня, удобно когда косметика или предметы для мейкапа под рукой 👍 также она мило вписывается везде, где бы я ее ни ставила:) мне очень нравится!
+                cite.response__comment-author Валерия Худолей
+                cite.response__comment-tag @valeriya_2020
               li.response__comment-item
-                blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-                cite.response__comment-author Анастасия Красильникова
-                cite.response__comment-tag @misssssiskras
-              li.response__comment-item
+                blockquote.response__comment-quote Я влюбилась!Я просто хочу рассказать, какой же это кайф - вязать из таких ниточек. Я никогда особо не тяготела к вязанию, очень уж медленно у меня тянулся этот процесс. Но эта пряжа поменяла мой взгляд на вязание крючком. А какие цвета!!!
+                cite.response__comment-author Ирина Вязова
+                cite.response__comment-tag @irina-smile
+              li.response__comment-item.response__comment-item--show
                 blockquote.response__comment-quote Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 cite.response__comment-author Анастасия Красильникова
                 cite.response__comment-tag @misssssiskras
@@ -102,7 +102,7 @@ html(lang="ru")
                 button.response__control-button.response__control-button--prev(type="button" title="Предыдущий отзыв")
               li.response__control-item
                 button.response__control-button.response__control-button--next(type="button" title="Следующий отзыв")
-            a.button.response__write-button(href="#") Написать
+            a.button.response__write-button(href="response.html") Написать
       section.contacts.site-main__contacts
         div.center-wrapper.contacts__center-wrapper
           div.contacts__wrapper
@@ -118,7 +118,23 @@ html(lang="ru")
                   td.contacts__description-col
                     address.contacts__address г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101
           div.contacts__map#map
-          a.button.contacts__write-us-button(href="#") Написать нам
+          a.button.contacts__write-us-button(href="write-us.html") Напишите нам
     include blocks/site-footer
+    div.modal-wrapper
+    section.modal-cart
+      h2.title.modal-cart__title Добавить в корзину
+      p.modal-cart__text Выберите размер:
+      form.modal-cart__form(action="https://echo.htmlacademy.ru" method="get")
+        ul.modal-cart__list
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="small-input" type="radio" value="small" checked)
+            label.modal-cart__label(for="small-input") S
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="middle-input" type="radio" value="middle")
+            label.modal-cart__label(for="middle-input") M
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="large-input" type="radio" value="large")
+            label.modal-cart__label(for="large-input") L
+        button.button.modal-cart__submit-button(type="submit") Добавить
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c50c4cad-f438-4cfc-8c3d-9eb6374817dd" type="text/javascript")
     script(src="js/app.js")

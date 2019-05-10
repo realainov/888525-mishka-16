@@ -1,6 +1,6 @@
 if (document.querySelector(".contacts__map") !== null) {
   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
+    let myMap = new ymaps.Map('map', {
         center: [59.938886, 30.323159],
         zoom: 16
       }, {

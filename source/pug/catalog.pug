@@ -43,37 +43,37 @@ html(lang="ru")
         div.center-wrapper.goods__center-wrapper
           ul.goods__list
             li.goods__item
-              a.goods__image-link(href="#")
+              a.goods__image-link(href="hare.html")
                 picture.goods__image
-                  source(media=desktop srcset="img/photo-hare-desktop@1x.jpg")
-                  source(media=tablet srcset="img/photo-hare-tablet@1x.jpg")
-                  img(src="img/photo-hare-mobile@1x.jpg" alt="Изображение зайчика-попрыгайчика")
+                  source(media=desktop srcset="img/photo-hare-desktop@2x.jpg 2x, img/photo-hare-desktop@1x.jpg 1x")
+                  source(media=tablet srcset="img/photo-hare-tablet@2x.jpg 2x, img/photo-hare-tablet@1x.jpg 1x")
+                  img(src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Изображение зайчика-попрыгайчика")
               div.goods__item-container
-                a.goods__item-link(href="#") Зайчик-попрыгайчик
+                a.goods__item-link(href="hare.html") Зайчик-попрыгайчик
                 span.goods__description Рост 30 см, вес 200 г
                 span.goods__price 1 200 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
                   include ../img/icon-cart.svg
             li.goods__item
-              a.goods__image-link(href="#")
+              a.goods__image-link(href="bowl.html")
                 picture.goods__image
-                  source(media=desktop srcset="img/photo-bowl-desktop@1x.jpg")
-                  source(media=tablet srcset="img/photo-bowl-tablet@1x.jpg")
-                  img(src="img/photo-bowl-mobile@1x.jpg" alt="Изображение корзинки для белья")
+                  source(media=desktop srcset="img/photo-bowl-desktop@2x.jpg 2x, img/photo-bowl-desktop@1x.jpg 1x")
+                  source(media=tablet srcset="img/photo-bowl-tablet@2x.jpg 2x, img/photo-bowl-tablet@1x.jpg 1x")
+                  img(src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Изображение корзинки для белья")
               div.goods__item-container
-                a.goods__item-link(href="#") Корзинка для белья
+                a.goods__item-link(href="bowl.html") Корзинка для белья
                 span.goods__description Диаметр 15 см, высота 10 см
                 span.goods__price 690 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
                   include ../img/icon-cart.svg
             li.goods__item
-              a.goods__image-link(href="#")
+              a.goods__image-link(href="toys.html")
                 picture.goods__image
-                  source(media=desktop srcset="img/photo-toys-desktop@1x.jpg")
-                  source(media=tablet srcset="img/photo-toys-tablet@1x.jpg")
-                  img(src="img/photo-toys-mobile@1x.jpg" alt="Изображение большой корзинки для игрушек")
+                  source(media=desktop srcset="img/photo-toys-desktop@2x.jpg 2x, img/photo-toys-desktop@1x.jpg 1x")
+                  source(media=tablet srcset="img/photo-toys-tablet@2x.jpg 2x, img/photo-toys-tablet@1x.jpg 1x")
+                  img(src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Изображение большой корзинки для игрушек")
               div.goods__item-container
-                a.goods__item-link(href="#") Большая корзинка для&nbsp;игрушек
+                a.goods__item-link(href="toys.html") Большая корзинка для&nbsp;игрушек
                 span.goods__description Диаметр 30 см, высота 30 см
                 span.goods__price 1 500 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
@@ -83,11 +83,29 @@ html(lang="ru")
           div.production__wrapper
             h2.title.production__title Процесс производства
             div.production__video
-              picture.production__image
-                source(media=desktop srcset="img/video-desktop@1x.jpg")
-                source(media=tablet srcset="img/video-tablet@1x.jpg")
-                img(src="img/video-mobile@1x.jpg" alt="Видео производства")
+              img.production__video-button(src="img/icon-play.svg" width="101" height="77" alt="Кнопка воспроизведения видео")
+              picture.production__video-image
+                source(media=desktop srcset="img/video-desktop@2x.jpg 2x, img/video-desktop@1x.jpg 1x")
+                source(media=tablet srcset="img/video-tablet@2x.jpg 2x, img/video-tablet@1x.jpg 1x")
+                img(src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео производства")
+              div.production__video-container#player
             p.production__text По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             a.button.production__order-button(href="#") Сделать заказ
+    div.modal-wrapper
+    section.modal-cart
+      h2.title.modal-cart__title Добавить в корзину
+      p.modal-cart__text Выберите размер:
+      form.modal-cart__form(action="https://echo.htmlacademy.ru" method="get")
+        ul.modal-cart__list
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="small-input" type="radio" value="small" checked)
+            label.modal-cart__label(for="small-input") S
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="middle-input" type="radio" value="middle")
+            label.modal-cart__label(for="middle-input") M
+          li.modal-cart__item
+            input.modal-cart__radio.visually-hidden(name="size" id="large-input" type="radio" value="large")
+            label.modal-cart__label(for="large-input") L
+        button.button.modal-cart__submit-button(type="submit") Добавить
     include blocks/site-footer
     script(src="js/app.js")
