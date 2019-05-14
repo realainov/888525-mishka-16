@@ -189,7 +189,6 @@ if (document.querySelector(".production") !== null) {
   let button = document.querySelector(".production__video-button");
   let image = document.querySelector(".production__video-image");
 
-  // 2. This code loads the IFrame Player API code asynchronously.
   var tag = document.createElement("script");
 
   tag.src = "https://www.youtube.com/iframe_api";
@@ -204,9 +203,18 @@ if (document.querySelector(".production") !== null) {
       width: "100%",
       videoId: "dEqSD3MFWCQ",
       playerVars: {
-        controls: "2"
-      },
-      controls: "2"
+        rel: 0,
+        autoplay: 0,
+        controls: 1,
+        showinfo: 0,
+        modestbranding: 0,
+        loop: 0,
+        fs: 0,
+        disablekb: 0,
+        cc_load_policty: 0,
+        iv_load_policy: 3,
+        autohide: 0
+      }
     });
   }
 
