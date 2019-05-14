@@ -64,8 +64,11 @@ html(lang="ru")
                   td.ware__description-col Высота:
                   td.ware__description-col 15 см
               picture.ware__image
+                source(media=desktop srcset="img/triple-set-desktop@2x.webp 2x, img/triple-set-desktop@1x.webp 1x" type="image/webp")
                 source(media=desktop srcset="img/triple-set-desktop@2x.jpg 2x, img/triple-set-desktop@1x.jpg 1x")
+                source(media=tablet srcset="img/triple-set-tablet@2x.webp 2x, img/triple-set-tablet@1x.webp 1x" type="image/webp")
                 source(media=tablet srcset="img/triple-set-tablet@2x.jpg 2x, img/triple-set-tablet@1x.jpg 1x")
+                source(srcset="img/triple-set-mobile@2x.webp 2x, img/triple-set-mobile@1x.webp 1x" type="image/webp")
                 img(src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Изображение вязаных корзинок")
               span.ware__price Цена: 990 руб.
               a.button.ware__order-button(href="#") Заказать
