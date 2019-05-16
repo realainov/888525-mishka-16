@@ -4,9 +4,11 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="css/style.min.css")
     title="Каталог товаров / Интернет-магазин «MISHKA»"
   body
+    div(style="display: none")
+      include ../img/sprite.svg
     header.site-header
       nav.site-header__site-navigation.site-navigation.site-navigation--footer-color
         button.site-navigation__menu-toggle(type="button" title="Открыть меню")
@@ -25,10 +27,12 @@ html(lang="ru")
             li.site-navigation__item.site-navigation__search
               a.site-navigation__link(href="#")
                 span.site-navigation__text Поиск по сайту
-                include ../img/icon-search.svg
+                svg(width="17.6" height="17.6")
+                  use(href="#icon-search")
             li.site-navigation__item.site-navigation__cart
               a.site-navigation__link(href="#") Корзина: пока пуста
-                include ../img/icon-cart.svg
+                svg(width="20.294" height="18.849")
+                  use(href="#icon-cart")
             li.site-navigation__item.site-navigation__new
               a.site-navigation__link(href="#") Новые поступления
             li.site-navigation__item.site-navigation__sale
@@ -56,7 +60,8 @@ html(lang="ru")
                 span.goods__description Рост 30 см, вес 200 г
                 span.goods__price 1 200 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
-                  include ../img/icon-cart.svg
+                  svg(width="20.294" height="18.849")
+                    use(href="#icon-cart")
             li.goods__item
               a.goods__image-link(href="bowl.html")
                 picture.goods__image
@@ -71,7 +76,8 @@ html(lang="ru")
                 span.goods__description Диаметр 15 см, высота 10 см
                 span.goods__price 690 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
-                  include ../img/icon-cart.svg
+                  svg(width="20.294" height="18.849")
+                    use(href="#icon-cart")
             li.goods__item
               a.goods__image-link(href="toys.html")
                 picture.goods__image
@@ -86,7 +92,8 @@ html(lang="ru")
                 span.goods__description Диаметр 30 см, высота 30 см
                 span.goods__price 1 500 руб.
                 a.goods__cart(href="#" title="Добавить в корзину")
-                  include ../img/icon-cart.svg
+                  svg(width="20.294" height="18.849")
+                    use(href="#icon-cart")
       section.production.site-main__production
         div.center-wrapper.production__center-wrapper
           div.production__wrapper
@@ -120,4 +127,4 @@ html(lang="ru")
             label.modal-cart__label(for="large-input") L
         button.button.modal-cart__submit-button(type="submit") Добавить
     include blocks/site-footer
-    script(src="js/app.js")
+    script(src="js/app.min.js")

@@ -1,7 +1,7 @@
 @keyframes bounce {
   0% {
     opacity: 0;
-    transform: translate3d(0px, -100%, 0px);
+    transform: translate3d(0, -100%, 0);
   }
 
   60% {
@@ -68,7 +68,7 @@
 }
 
 .modal-cart__form {
-
+  //
 }
 
 .modal-cart__list {
@@ -90,7 +90,7 @@
 }
 
 .modal-cart__radio {
-
+  //
 }
 
 .modal-cart__radio + .modal-cart__label {

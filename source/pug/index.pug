@@ -4,9 +4,11 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="css/style.min.css")
     title="Главная страница / Интернет-магазин «MISHKA»"
   body
+    div(style="display: none")
+      include ../img/sprite.svg
     header.site-header
       nav.site-header__site-navigation.site-navigation.site-navigation--image-color
         div.center-wrapper.site-navigation__center-wrapper
@@ -25,10 +27,12 @@ html(lang="ru")
             li.site-navigation__item.site-navigation__search.site-navigation__item--show
               a.site-navigation__link(href="#")
                 span.site-navigation__text Поиск по сайту
-                include ../img/icon-search.svg
+                svg(width="17.6" height="17.6")
+                  use(href="#icon-search")
             li.site-navigation__item.site-navigation__cart.site-navigation__item--show
               a.site-navigation__link(href="#") Корзина: пока пуста
-                include ../img/icon-cart.svg
+                svg(width="20.294" height="18.849")
+                  use(href="#icon-cart")
             li.site-navigation__item.site-navigation__new.site-navigation__item--show
               a.site-navigation__link(href="#") Новые поступления
             li.site-navigation__item.site-navigation__sale.site-navigation__item--show
@@ -140,4 +144,4 @@ html(lang="ru")
             label.modal-cart__label(for="large-input") L
         button.button.modal-cart__submit-button(type="submit") Добавить
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c50c4cad-f438-4cfc-8c3d-9eb6374817dd" type="text/javascript")
-    script(src="js/app.js")
+    script(src="js/app.min.js")
