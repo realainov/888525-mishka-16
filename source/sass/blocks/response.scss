@@ -24,7 +24,7 @@
   @media ($desktop) {
     padding: 63px 50px 82px;
     background-position: top 65px left 50px, bottom center;
-    background-size: auto, 1050px;
+    background-size: 350px, 1050px;
   }
 }
 
@@ -125,12 +125,12 @@
     margin: 0;
     border: none;
     position: absolute;
-    bottom: 30px;
+    bottom: 33px;
     right: 0;
   }
 
   @media ($desktop) {
-    bottom: 98px;
+    bottom: 101px;
   }
 }
 

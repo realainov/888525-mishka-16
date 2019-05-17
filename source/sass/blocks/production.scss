@@ -18,7 +18,7 @@
 
 .production__wrapper {
   outline: 1px solid $border-color;
-  padding: 23px 0 30px;
+  padding: 25px 0 30px;
   position: relative;
 
   @media ($tablet) {
@@ -145,7 +145,7 @@
   }
 
   @media ($desktop) {
-    margin: 0 42px 48px;
+    margin: 0 42px 45px;
   }
 }
 
