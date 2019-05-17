@@ -54,9 +54,9 @@ gulp.task("styles", function () {
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on("error", sass.logError))
     .pipe(postcss(processors))
-	.pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(cssnano())
-	.pipe(rename({suffix: ".min"}))
+    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/css"));
 });
@@ -66,7 +66,7 @@ gulp.task("scripts", function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat("app.min.js"))
-	.pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/js"));
