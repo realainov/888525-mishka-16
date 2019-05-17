@@ -54,6 +54,7 @@ gulp.task("styles", function () {
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on("error", sass.logError))
     .pipe(postcss(processors))
+	.pipe(gulp.dest("build/css"))
     .pipe(cssnano())
 	.pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("."))
@@ -65,6 +66,7 @@ gulp.task("scripts", function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat("app.min.js"))
+	.pipe(gulp.dest("build/js"))
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/js"));
@@ -127,7 +129,7 @@ gulp.task("build", gulp.series(
 gulp.task("server", function () {
   gulp.watch("source/pug/**/*.pug", gulp.parallel("pages"));
   gulp.watch("source/img/*", gulp.series("images", "sprite"));
-  gulp.watch("source/sass/style.scss", gulp.parallel("styles"));
+  gulp.watch(["source/sass/**/*.{scss,sass}", "!source/sass/style.scss"], gulp.parallel("styles"));
   gulp.watch(["source/js/**/*.js", "!source/js/app.js"], gulp.parallel("scripts"));
 });
 

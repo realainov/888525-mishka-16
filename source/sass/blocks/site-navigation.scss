@@ -318,6 +318,7 @@
 
   &:hover svg,
   &:focus svg {
+    fill: $seafoam-blue;
     opacity: 1;
   }
 
@@ -325,19 +326,10 @@
     opacity: 1;
   }
 
-  &:hover path,
-  &:focus path {
-    fill: $seafoam-blue;
-  }
-
   svg {
     position: absolute;
     top: 50%;
     opacity: 0.2;
-    transition: 0.3s;
-  }
-
-  path {
     transition: 0.3s;
   }
 }

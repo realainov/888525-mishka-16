@@ -35,12 +35,12 @@
     display: block;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover svg,
+  &:focus svg {
     fill: $aqua-marine-two;
   }
 
-  &:active path {
+  &:active svg {
     opacity: 0.3;
   }
 }
@@ -80,12 +80,12 @@
   outline: none;
   transition: 0.3s;
 
-  &:hover path,
-  &:focus path {
+  &:hover svg,
+  &:focus svg {
     fill: $aqua-marine-two;
   }
 
-  &:active path {
+  &:active svg {
     opacity: 0.3;
   }
 }

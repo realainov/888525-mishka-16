@@ -544,12 +544,12 @@
 .order-form__email-field {
   transition: 0.3s;
 
-  & + .order-form__email-label path {
+  & + .order-form__email-label svg {
     opacity: 0.2;
   }
 
-  &:hover + .order-form__email-label path,
-  &:focus + .order-form__email-label path {
+  &:hover + .order-form__email-label svg,
+  &:focus + .order-form__email-label svg {
     fill: $aquamarin-blue;
     opacity: 1;
   }
@@ -559,12 +559,12 @@
   @include text(19px, 19px);
   transition: 0.3s;
 
-  & + .order-form__phone-label path {
+  & + .order-form__phone-label svg {
     opacity: 0.2;
   }
 
-  &:hover + .order-form__phone-label path,
-  &:focus + .order-form__phone-label path {
+  &:hover + .order-form__phone-label svg,
+  &:focus + .order-form__phone-label svg {
     fill: $aquamarin-blue;
     opacity: 1;
   }
