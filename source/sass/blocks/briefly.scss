@@ -6,7 +6,7 @@
   padding: 29px 23px 0;
 
   @media ($tablet) {
-    padding: 47px 50px 55px;
+    padding: 49px 50px 55px;
   }
 
   @media ($desktop) {
@@ -68,7 +68,7 @@
   }
 }
 
-.briefly___item--ball {
+.briefly__ball {
   @include bg-icon("icon-feature-ball.svg", 10px, 31px);
 
   @media ($tablet) {
@@ -81,7 +81,7 @@
   }
 }
 
-.briefly___item--flower {
+.briefly__flower {
   @include bg-icon("icon-feature-flower.svg", 15px, 28px);
 
   @media ($tablet) {
@@ -94,7 +94,7 @@
   }
 }
 
-.briefly___item--gift {
+.briefly__gift {
   @include bg-icon("icon-feature-gift.svg", 10px, 30px);
 
   @media ($tablet) {
@@ -107,7 +107,7 @@
   }
 }
 
-.briefly___item--heart {
+.briefly__heart {
   @include bg-icon("icon-feature-heart.svg", 14px, 35px);
 
   @media ($tablet) {
@@ -120,7 +120,7 @@
   }
 }
 
-.briefly___item--money {
+.briefly__money {
   @include bg-icon("icon-feature-money.svg", 8px, 30px);
 
   @media ($tablet) {
@@ -133,7 +133,7 @@
   }
 }
 
-.briefly___item--rocket {
+.briefly__rocket {
   @include bg-icon("icon-feature-rocket.svg", 1px, 33px);
   padding: 83px 0 0 7px;
 

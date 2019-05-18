@@ -125,6 +125,10 @@
 .production__video-image {
   position: absolute;
   z-index: 2;
+
+  img {
+    display: block;
+  }
 }
 
 .production__video-container {

@@ -16,7 +16,7 @@
 
   @media ($desktop) {
     display: flex;
-    padding: 77px 50px 105px 220px;
+    padding: 75px 50px 105px 220px;
     background-position: top 139px left 113px;
   }
 }
@@ -119,6 +119,7 @@
   }
 
   &:active {
+    color: $aqua-marine-two;
     opacity: 0.3;
   }
 }

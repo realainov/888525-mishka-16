@@ -95,7 +95,9 @@
 }
 
 .goods__image {
-  //
+  img {
+    display: block;
+  }
 }
 
 .goods__item-container {

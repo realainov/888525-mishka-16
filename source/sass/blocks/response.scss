@@ -4,27 +4,47 @@
 
 .response__center-wrapper {
   padding: 55px 30px 50px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position: bottom center;
-  background-size: 100%;
+  position: relative;
 
   @media ($tablet) {
     padding: 76px 50px 100px 46px;
-    background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top left, bottom center;
-    background-size: 350px, 100%;
+    background-position: top left;
+    background-size: 350px;
   }
 
   @media ($tablet) and (min-resolution: 144dpi), ($tablet) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/review@2x.jpg"), url("../img/bg-zigzag-line.svg");
+    background-image: url("../img/review@2x.jpg");
   }
 
   @media ($desktop) {
-    padding: 63px 50px 82px;
-    background-position: top 65px left 50px, bottom center;
-    background-size: 350px, 1050px;
+    padding: 63px 50px 84px;
+    background-position: top 65px left 50px;
+    background-size: 350px;
+  }
+
+  &::after {
+    @include bg-icon("../img/bg-zigzag-line.svg", bottom, left 22px);
+    display: block;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    content: "";
+
+    @media ($tablet) {
+      background-position: bottom left 20px;
+    }
+
+    @media ($desktop) {
+      width: 1050px;
+      left: 50px;
+      background-position: bottom left 25px;
+    }
   }
 }
 
