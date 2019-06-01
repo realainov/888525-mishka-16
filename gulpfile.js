@@ -81,7 +81,7 @@ gulp.task("images", function () {
       imagemin.gifsicle()
     ]))
     .pipe(gulp.dest("build/img"))
-    .pipe(webp({lossless: true}))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
