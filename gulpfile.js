@@ -27,7 +27,7 @@ const svgstore = require("gulp-svgstore");
 gulp.task("pages", function () {
   return gulp.src("source/pug/*.pug")
     .pipe(plumber())
-    .pipe(pug({pretty: true}))
+    .pipe(pug({pretty: false}))
     .pipe(gulp.dest("build"));
 });
 
